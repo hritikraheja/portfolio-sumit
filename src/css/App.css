@@ -1,0 +1,223 @@
+@keyframes scrollText {
+  from   { transform: translateX(0%); }
+  to { transform: translateX(50%); }
+}
+
+.App {
+  text-align: center;
+  font-family: 'Mersad', sans-serif;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.App #background{
+  width: 100%;
+  height: 100%;
+  background-color: #221E1E;
+  position: absolute;
+  top:0px;
+  left:0px;
+  bottom: 0px;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+nav{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: right;
+  z-index: 1;
+  position: relative;
+  padding-top: 30px;
+  margin-left: auto;
+}
+
+nav p{
+  color: white;
+  height: fit-content;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-family: 'Mersad';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav p:hover{
+  font-weight: 600;
+  transform: scale(1.1);
+}
+
+nav button{
+  width: 30px;
+  height: 30px;
+  background-color: #393737;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  padding: auto;
+  line-height: 30px;
+  display: block;
+  color: white;
+  font-size: 12px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+nav button:hover{
+  transform: scale(1.2);
+}
+
+.App .marquee{
+  position: relative;
+  background-color: #d9d9d9;
+  padding: 20px 0px;
+  /* width: 100%; */
+  margin-top: 80px;
+}
+
+.App .marquee #psd{
+  display: flex;
+  border: none;
+  outline: none;
+}
+
+.App .marquee #psd img{
+  display: block;
+  margin-right: 22px;
+  height: 36px;
+}
+
+.App #starAndExperience{
+  width: 100%;
+  position: relative;
+}
+
+.App #starAndExperience #sideStar{
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -50px;
+  bottom: -220px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width : 480px) {
+  nav {
+    width: 90%;
+    margin-right: auto;
+  }
+
+  nav p{
+    margin: auto auto auto 0px;
+  }
+
+  nav button{
+    margin: auto auto auto 0px;
+  }
+
+  .App .marquee #psd img{
+    height: 20px;
+  }
+
+  .App #starAndExperience #sideStar{
+    width: 188px;
+    height: 188px;
+    right: -25px;
+    bottom: -88px;
+  }
+}
+
+@media (min-width : 481px) and (max-width : 768px) {
+  nav {
+    width: 85%;
+  }
+  .App .marquee #psd img{
+    height: 25px;
+  }
+
+  .App #starAndExperience #sideStar{
+    width: 248px;
+    height: 248px;
+    right: -35px;
+    bottom: -98px;
+  }
+}
+
+@media (min-width : 769px) and (max-width : 1024px) {
+  nav{
+    width: 70%;
+  }
+  .App .marquee #psd img{
+    height: 30px;
+  }
+  .App #starAndExperience #sideStar{
+    width: 350px;
+    height: 350px;
+    right: -45px;
+    bottom: -150px;
+  }
+}
+
+@media (min-width : 1440px){
+  nav {
+    width: 50%;
+  }
+
+  nav p{
+    font-size: 18px;
+  }
+
+  nav button{
+    width: 40px;
+    height: 40px;
+  }
+
+  .App .marquee #psd img{
+    height: 40px;
+  }
+  .App #starAndExperience #sideStar{
+    width: 500px;
+    height: 500px;
+    bottom: -240px;
+    right: -55px;
+  }
+}

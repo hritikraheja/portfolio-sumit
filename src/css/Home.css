@@ -1,0 +1,330 @@
+@keyframes rotate{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(-360deg); }
+}
+
+
+#home {
+  width: 90%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home #name {
+  width: fit-content;
+  font-family: "Mersad";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 25px;
+  color: white;
+  margin-top: 60px;
+  cursor: default;
+}
+
+#home #head {
+  font-size: 110px;
+  color: white;
+  text-align: left;
+  line-height: 110px;
+  font-weight: 300;
+  margin: 0px;
+  margin-top: 60px;
+  padding-bottom: 0px;
+  cursor: default;
+}
+
+#home #head span{
+    font-weight: 500;
+}
+
+#home #head img{
+    padding: auto;
+    cursor: pointer;
+}
+
+#home #head img:hover{
+    transform: rotate(90deg) scale(1.05);
+    transition-duration: 500ms
+}
+
+#home #section{
+    width: 100%;
+    display: flex;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+#home #section #division{
+    flex: 1;
+}
+
+#home #section #division img{
+    display: block;
+    width: 155px;
+    height: 155px;
+    margin-right: auto;
+    margin-top: 60px;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#home #section #division img:hover{
+    transform: scale(1.5)
+}
+
+#home #section #socialMedia{
+    margin-top: 140px;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home #section #bio{
+    margin-top: 0px;
+    text-align: left;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+}
+
+#home #section #socialMedia p, #home #section #bio p{
+    margin: 0px;
+    cursor: default;
+    font-weight: 100;
+}
+
+#home #section #socialMedia p:hover, #home #section #bio p:hover{
+    transform: translateX(15px);
+    /* font-weight: 600; */
+}
+
+@media (max-width : 436px) {
+    #home #head{
+        font-size: 65px;
+        margin-top: 50px;
+        line-height: 75px;
+    }
+
+    #home #head img{
+        width: 50px;
+    }
+
+    #home #section{
+        margin-top: 40px;
+        justify-content: space-between;
+    }
+
+    #home #section #division{
+        flex: 0;
+    }
+
+    #home #section #division:nth-last-of-type(1){
+        flex: 0.8;
+    }
+
+    #home #section #socialMedia{
+        width: 100%;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #home #section #bio{
+        margin-left: 0px;
+    }
+
+    #home #section #division img{
+        width: 80px;
+        height: 80px;
+        margin-top: 0px;
+    }
+
+    #home #section #socialMedia p, #home #section #bio p{
+        width: 100%;
+        font-size: 10px;
+        line-height: 16px;
+    }
+}
+
+@media(min-width : 437px) and (max-width : 638px) {
+    #home #name{
+        font-size: 15px;
+        margin-top: 60px;
+    }
+
+    #home #head{
+        font-size: 80px;
+        margin-top: 50px;
+        line-height: 88px;
+    }
+
+    #home #head img{
+        width: 65px;
+    }
+
+    #home #section{
+        margin-top: 40px;
+        justify-content: space-between;
+    }
+
+    #home #section #division{
+        flex: 0;
+    }
+
+    #home #section #division:nth-last-of-type(1){
+        flex: 0.7;
+    }
+
+    #home #section #socialMedia{
+        width: 100%;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #home #section #bio{
+        margin-left: 0px;
+    }
+
+    #home #section #division img{
+        width: 100px;
+        height: 100px;
+        margin-top: 0px;
+    }
+
+    #home #section #socialMedia p, #home #section #bio p{
+        width: 100%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media (min-width : 639px) and (max-width : 768px) {
+    #home #name{
+        font-size: 17px;
+        margin-top: 80px;
+    }
+
+    #home #head{
+        font-size: 60px;
+        margin-top: 50px;
+        line-height: 68px;
+    }
+
+    #home #head img{
+        width: 45px;
+    }
+
+    #home #section{
+        margin-top: 0px;
+    }
+
+    #home #section #division #socialMedia{
+        margin-top: 120px;
+    }
+
+    #home #section #division img{
+        display: block;
+        width: 125px;
+        height: 125px;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    #home #section #socialMedia p, #home #section #bio p{
+        font-size: 14px;
+    }
+}
+
+@media (min-width : 769px) and (max-width : 1024px) {
+    #home #name{
+        font-size: 18px;
+        margin-top: 80px;
+    }
+
+    #home #head{
+        font-size: 72px;
+        margin-top: 50px;
+        line-height: 80px;
+    }
+
+    #home #head img{
+        width: 65px;
+    }
+
+    #home #section{
+        margin-top: 0px;
+    }
+
+    #home #section #division img{
+        display: block;
+        width: 140px;
+        height: 140px;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    #home #section #division #socialMedia{
+        margin-top: 120px;
+    }
+
+    #home #section #socialMedia p, #home #section #bio p{
+        font-size: 16px;
+    }
+}
+
+@media (min-width : 1025px) and (max-width : 1169px) {
+    #home #name{
+        font-size: 20px;
+        margin-top: 80px;
+    }
+
+    #home #head{
+        font-size: 95px;
+        margin-top: 50px;
+        line-height: 103px;
+    }
+
+    #home #head img{
+        width: 65px;
+    }
+
+    #home #section{
+        margin-top: 0px;
+    }
+    #home #section #division #socialMedia{
+        margin-top: 135px;
+    }
+
+    #home #section #division img{
+        display: block;
+        width: 155px;
+        height: 155px;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    #home #section #socialMedia p, #home #section #bio p{
+        font-size: 16px;
+    }
+}
+
+@media (min-width : 1440px) {
+    #home #head{
+        font-size: 120px;
+        margin-top: 50px;
+        line-height: 128px;
+    }
+
+    #home #name{
+        font-size: 24px;
+    }
+}

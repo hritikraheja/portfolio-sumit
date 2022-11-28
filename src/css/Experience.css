@@ -1,0 +1,720 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#experience {
+  width: 90%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#experience #head {
+  font-size: 110px;
+  color: white;
+  text-align: left;
+  line-height: 110px;
+  font-weight: 300;
+  margin: 0px;
+  margin-top: 120px;
+  padding-bottom: 0px;
+  cursor: default;
+}
+
+#experience #detailsAccordion {
+  width: 85%;
+  display: block;
+  margin-left: auto;
+}
+
+#experience #detailsAccordion .accordionItem .accordionHeader {
+  width: fit-content;
+  display: flex;
+  margin-top: 25px;
+}
+
+#experience #detailsAccordion .accordionItem .accordionHeader p {
+  color: white;
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: 100;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+#experience #detailsAccordion .accordionItem .accordionHeader p:hover {
+  font-weight: 500;
+}
+
+#experience #detailsAccordion .accordionItem .accordionHeader img {
+  display: block;
+  height: 40px;
+  margin: auto 0px auto 40px;
+  cursor: pointer;
+}
+
+#experience #detailsAccordion .accordionItem .accordionHeader:hover img {
+  transform: scale(1.1) rotate(90deg);
+  transition-duration: 300ms;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody {
+  width: 100%;
+  cursor: default;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody #psd {
+  display: flex;
+}
+
+.show {
+  /* position: relative; */
+  /* display: none; */
+  height: fit-content;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody #details {
+  width: 70%;
+  color: white;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo {
+  display: flex;
+  margin-top: 25px;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo
+  p {
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo
+  p:hover {
+  font-weight: 600;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo
+  img {
+  float: right;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo
+  img:hover {
+  transform: scale(1.1);
+  /* animation-name: rotate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration {
+  display: flex;
+  margin-top: 10px;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration
+  p {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration
+  span {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 100;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody #details #summary {
+  width: 100%;
+  text-align: left;
+  font-weight: 100;
+  margin-top: 50px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody #skillsDiv {
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  margin: auto;
+  margin-right: 0px;
+  float: right;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+  width: fit-content;
+  font-size: 17px;
+  line-height: 23px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+#experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills {
+  width: fit-content;
+}
+
+#experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #skillsDiv
+  #skills
+  span {
+  display: block;
+  width: fit-content;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: left;
+  font-weight: 100;
+}
+
+@media (max-width: 580px) {
+  #experience #head {
+    font-size: 65px;
+    line-height: 70px;
+  }
+
+  #experience #detailsAccordion {
+    width: 98%;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionHeader {
+    margin-top: 15px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionHeader p {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionHeader img {
+    height: 25px;
+    margin: auto 0px auto 20px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo {
+    margin-top: 15px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo  p{
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo  img{
+    height: 35px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration
+  p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration
+  span {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #summary {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills span{
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 100;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 768px) {
+    #experience #head {
+        font-size: 72px;
+        line-height: 82px;
+      }
+    
+      #experience #detailsAccordion {
+        width: 98%;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader {
+        margin-top: 20px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader p {
+        font-size: 35px;
+        line-height: 42px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader img {
+        height: 30px;
+        margin: auto 0px auto 30px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo {
+        margin-top: 20px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  p{
+        font-size: 35px;
+        line-height: 42px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  img{
+        height: 42px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      p {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      span {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #summary {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 24px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills span{
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 100;
+      }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #experience #head {
+        font-size: 85px;
+        line-height: 93px;
+      }
+    
+      #experience #detailsAccordion {
+        width: 95%;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader {
+        margin-top: 25px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader p {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader img {
+        height: 40px;
+        margin: auto 0px auto 30px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo {
+        margin-top: 25px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  p{
+        font-size: 40px;
+        line-height: 48px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  img{
+        height: 45px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      span {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #summary {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 30px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 25px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills span{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 100;
+      }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #experience #head {
+        font-size: 90px;
+        line-height: 98px;
+      }
+    
+      #experience #detailsAccordion {
+        width: 87%;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader {
+        margin-top: 30px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader p {
+        font-size: 42px;
+        line-height: 50px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader img {
+        height: 45px;
+        margin: auto 0px auto 35px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo {
+        margin-top: 30px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  p{
+        font-size: 42px;
+        line-height: 50px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  img{
+        height: 45px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      span {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #summary {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 30px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 25px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills span{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 100;
+      }
+}
+
+@media (min-width: 1440px) {
+    #experience #head {
+        font-size: 120px;
+        line-height: 128px;
+      }
+    
+      #experience #detailsAccordion {
+        width: 85%;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader {
+        margin-top: 30px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader p {
+        font-size: 48px;
+        line-height: 56px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionHeader img {
+        height: 45px;
+        margin: auto 0px auto 40px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo {
+        margin-top: 30px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  p{
+        font-size: 48px;
+        line-height: 56px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #nameAndLogo  img{
+        height: 55px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #profileAndDuration
+      span {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    
+      #experience
+      #detailsAccordion
+      .accordionItem
+      .accordionBody
+      #details
+      #summary {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 30px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 25px;
+      }
+    
+      #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills span{
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 100;
+      }
+}

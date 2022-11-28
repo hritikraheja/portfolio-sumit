@@ -1,0 +1,529 @@
+#about {
+    width: 90%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about #head {
+    font-size: 110px;
+    color: white;
+    text-align: left;
+    line-height: 110px;
+    font-weight: 300;
+    margin: 0px;
+    margin-top: 120px;
+    padding-bottom: 0px;
+    cursor: default;
+  }
+
+  #about #profile{
+    display: block;
+    width: 85%;
+    margin-top: 50px;
+    margin-left: auto;
+  }
+
+  #about #basicsDiv{
+    display: flex;
+  }
+
+  #about #basicsDiv #hello{
+    width: 70%;
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: left;
+    margin: 0px;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about #basicsDiv #detailsDiv p{
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 22px;
+    text-align: left;
+    margin: 0px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: block;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: none;
+  }
+
+  #profile #summaryDiv{
+    display: flex;
+    margin-top: 30px;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 60%;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    margin: 0px;
+  }
+
+  #profile #summaryDiv #scrollToTopButtonWeb{
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  #profile #summaryDiv #scrollToTopButtonWeb:hover{
+    transform: scale(1.2);
+  }
+
+  #about #scrollToTopButtonMobile{
+    display: none;
+    float: right;
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #about #scrollToTopButtonMobile:hover{
+    transform: scale(1.2);
+  }
+
+  #about #otherThings{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  #about #otherThings #section #sectionHead{
+    color: #ababab;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 46px;
+    margin: 0px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 70%;
+    display: flex;
+    color: white;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0px;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0px;
+    margin-left: auto;
+}
+
+@media (max-width : 504px){
+  #about #head{
+    font-size: 60px;
+    line-height: 68px;
+    margin-top: 80px;
+  }
+
+  #about #profile{
+    width: 95%;
+    margin-top:50px;
+  }
+
+  #about #basicsDiv #hello{
+    font-size: 28px;
+    line-height: 34px;
+    width: 60%;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    width: 40%;
+  }
+  #about #basicsDiv #detailsDiv p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: none;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: block;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 80%;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 100;
+  }
+
+  #profile #summaryDiv{
+    margin-top: 40px;
+  }
+
+  #about #otherThings{
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+  } 
+
+  #profile #summaryDiv #scrollToTopButtonWeb{
+    display: none;
+  }
+
+  #about #scrollToTopButtonMobile{
+    display: block;
+    margin-top: 25px;
+  }
+
+  #about #otherThings #section #sectionHead{
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 80%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 505px) and (max-width : 768px){
+  #about #head{
+    font-size: 70px;
+    line-height: 76px;
+    margin-top: 85px;
+  }
+
+  #about #profile{
+    width: 95%;
+    margin-top:45px;
+  }
+
+  #about #basicsDiv #hello{
+    font-size: 32px;
+    line-height: 38px;
+    width: 60%;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    width: 40%;
+  }
+  #about #basicsDiv #detailsDiv p{
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: none;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: block;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 85%;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+  }
+
+  #profile #summaryDiv{
+    margin-top: 40px;
+  }
+
+  #profile #summaryDiv #scrollToTopButtonWeb{
+    display: none;
+  }
+
+  #about #scrollToTopButtonMobile{
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin-top: 25px;
+  }
+
+  #about #otherThings{
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+  } 
+
+  #about #otherThings #section #sectionHead{
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 70%;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width : 1024px){
+  #about #head{
+    font-size: 85px;
+    line-height: 93px;
+    margin-top: 90px;
+  }
+
+  #about #profile{
+    width: 90%;
+    margin-top : 50px;
+  }
+
+  #about #basicsDiv #hello{
+    font-size: 35px;
+    line-height: 42px;
+    width: 70%;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    width: 30%;
+  }
+  #about #basicsDiv #detailsDiv p{
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: none;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: block;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 85%;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 100;
+  }
+
+  #profile #summaryDiv{
+    margin-top: 30px;
+  }
+
+  #profile #summaryDiv #scrollToTopButtonWeb{
+    width: 45px;
+    height: 45px;
+  }
+
+  #about #otherThings #section #sectionHead{
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 15px;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 80%;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width : 1200px){
+  #about #head{
+    font-size: 90px;
+    line-height: 98px;
+    margin-top: 110px;
+  }
+
+  #about #profile{
+    width: 85%;
+    margin-top : 60px;
+  }
+
+  #about #basicsDiv #hello{
+    font-size: 38px;
+    line-height: 45px;
+    width: 70%;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    width: 30%;
+  }
+  #about #basicsDiv #detailsDiv p{
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: none;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: block;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 85%;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  }
+
+  #profile #summaryDiv{
+    margin-top: 30px;
+  }
+
+  #profile #summaryDiv #scrollToTopButtonWeb{
+    width: 50px;
+    height: 50px;
+  }
+
+  #about #otherThings #section #sectionHead{
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 80%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px){
+  #about #head{
+    font-size: 120px;
+    line-height: 128px;
+    margin-top: 110px;
+  }
+
+  #about #profile{
+    width: 90%;
+    margin-top : 60px;
+  }
+
+  #about #basicsDiv #hello{
+    font-size: 42px;
+    line-height: 48px;
+    width: 70%;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    width: 30%;
+  }
+  #about #basicsDiv #detailsDiv p{
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: none;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: block;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 80%;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 100;
+  }
+
+  #profile #summaryDiv{
+    margin-top: 30px;
+  }
+
+  #profile #summaryDiv #scrollToTopButtonWeb{
+    width: 55px;
+    height: 55px;
+  }
+
+  #about #otherThings #section #sectionHead{
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 80%;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

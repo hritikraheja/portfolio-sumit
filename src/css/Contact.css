@@ -1,0 +1,55 @@
+#contact {
+    width: 90%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#contact #head{
+    font-size: 110px;
+    color: white;
+    text-align: left;
+    line-height: 110px;
+    font-weight: 300;
+    margin: 0px;
+    padding-bottom: 0px;
+    cursor: default;
+}
+
+#contact #contactDetails{
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 60px;
+}
+
+#contact #contactDetails #left{
+    width: 50%;
+}
+
+#contact #contactDetails #left #contactHead{
+    color: white;
+    font-size: 45px;
+    line-height: 60px;
+}
+
+#contact #contactDetails #left #contactHead img{
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+}
+
+#contact #contactDetails #left #contactSubhead{
+    
+}
+
+#contact #contactDetails #rightWeb{
+    width: 40%;
+    margin-left: auto;
+}
+
+#contact #contactDetails #rightMob{
+    display: none;
+}
