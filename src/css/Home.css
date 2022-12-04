@@ -3,7 +3,6 @@
     to{ transform: rotate(-360deg); }
 }
 
-
 #home {
   width: 90%;
   position: relative;
@@ -19,14 +18,12 @@
   font-weight: 500;
   font-size: 22px;
   line-height: 25px;
-  color: white;
   margin-top: 60px;
   cursor: default;
 }
 
 #home #head {
   font-size: 110px;
-  color: white;
   text-align: left;
   line-height: 110px;
   font-weight: 300;
@@ -54,7 +51,6 @@
     width: 100%;
     display: flex;
     text-align: left;
-    color: white;
     font-size: 15px;
     line-height: 22px;
 }
@@ -70,7 +66,7 @@
     margin-right: auto;
     margin-top: 60px;
     animation-name: rotate;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -95,15 +91,16 @@
     margin-left: auto;
 }
 
-#home #section #socialMedia p, #home #section #bio p{
+#home #section #socialMedia span, #home #section #bio p{
     margin: 0px;
     cursor: default;
-    font-weight: 100;
+    font-weight: 500;
+    display: block;
+    text-align: left;
 }
 
-#home #section #socialMedia p:hover, #home #section #bio p:hover{
-    transform: translateX(15px);
-    /* font-weight: 600; */
+#home #section #socialMedia span:hover, #home #section #bio p:hover{
+    transform: scaleY(1.5)
 }
 
 @media (max-width : 436px) {

@@ -1,0 +1,173 @@
+#socialMediaPosts{
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+}
+
+#socialMediaPosts #header{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#socialMediaPosts #header p{
+    font-size: 45px;
+    line-height: 52px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+#socialMediaPosts #header span{
+    font-size: 15px;
+    line-height: 19px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    margin-left: auto;
+    text-align: right;
+}
+
+#socialMediaPosts .marquee #topSlider{
+    width: 100%;
+    display: flex;
+    border: none;
+    outline: none;
+    margin-top: 50px;
+}
+
+#socialMediaPosts .marquee #bottomSlider{
+    width: 100%;
+    display: flex;
+    border: none;
+    outline: none;
+    margin-top: 40px;
+}
+
+#socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
+    display: block;
+    height: 250px;
+    margin: 0px 10px;
+}
+
+@media (max-width : 480px) {
+    #socialMediaPosts #header p{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    #socialMediaPosts #header span{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    #socialMediaPosts .marquee #topSlider{
+        margin-top: 40px;
+    }
+    
+    #socialMediaPosts .marquee #bottomSlider{
+        width: 100%;
+        display: flex;
+        border: none;
+        outline: none;
+        margin-top: 20px;
+    }
+    
+    #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
+        height: 140px;
+        margin: 0px 5px;
+    }
+}
+
+@media (min-width : 481px) and (max-width: 768px) {
+    #socialMediaPosts #header{
+        width: 90%;
+    }
+    
+    #socialMediaPosts #header p{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    #socialMediaPosts #header span{
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    #socialMediaPosts .marquee #topSlider{
+        margin-top: 50px;
+    }
+
+    #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
+        height: 150px;
+        margin: 0px 5px;
+    }
+}
+
+@media (min-width : 769px) and (max-width: 1024px) {
+    #socialMediaPosts #header{
+        width: 90%;
+    }
+    
+    #socialMediaPosts #header p{
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    #socialMediaPosts #header span{
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    #socialMediaPosts .marquee #topSlider{
+        margin-top: 40px;
+    }
+
+    #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
+        height: 200px;
+        margin: 0px 5px;
+    }
+}
+
+@media (min-width : 1025px) and (max-width: 1200px) {
+    
+    #socialMediaPosts #header p{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    #socialMediaPosts #header span{
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    #socialMediaPosts .marquee #topSlider{
+        margin-top: 50px;
+    }
+
+    #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
+        height: 225px;
+        margin: 0px 5px;
+    }
+}
+
+@media(min-width: 1440px){
+    #socialMediaPosts #header p{
+        font-size: 52px;
+        line-height: 58px;
+    }
+
+    #socialMediaPosts #header span{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    #socialMediaPosts .marquee #topSlider{
+        margin-top: 60px;
+    }
+
+    #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
+        height: 280px;
+        margin: 0px 5px;
+    }   
+}

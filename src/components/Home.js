@@ -1,26 +1,28 @@
 import React from "react";
 import "../css/Home.css";
-import enterIcon from "../assets/enterIcon.svg";
-import hireMeCircle from "../assets/hireMeCircle.svg";
+import enterIconDarkTheme from "../assets/enterIconDarkTheme.svg";
+import enterIconLightTheme from "../assets/enterIconLightTheme.svg";
+import hireMeCircleDarkTheme from "../assets/hireMeCircleDarkTheme.svg";
+import hireMeCircleLightTheme from "../assets/hireMeCircleLightTheme.svg";
 
 export const Home = (props) => {
   return (
-    <div id="home">
+    <div id="home" className={props.theme == props.THEMES.DARK ? 'darkThemeFont' : 'lightThemeFont'}>
       <p id="name">SUMIT MITTAL</p>
       <p id="head">
         I <span>CREATE</span> DESIGNS<br></br>
         THAT ARE HARD TO<br></br>
-        IGNORE <img src={enterIcon}></img>
+        IGNORE <a href="#about"><img src={props.theme == props.THEMES.DARK ? enterIconDarkTheme : enterIconLightTheme}></img></a>
       </p>
       <div id="section">
         <div id="division">
-          <img src={hireMeCircle}></img>
+          <img src={props.theme == props.THEMES.DARK ? hireMeCircleDarkTheme : hireMeCircleLightTheme}></img>
         </div>
         <div id="division">
           <div id="socialMedia">
-            <p>BEHANCE</p>
-            <p>LINKED</p>
-            <p>INSTAGRAM</p>
+            <span>BEHANCE</span>
+            <span>LINKEDIN</span>
+            <span>INSTAGRAM</span>
           </div>
         </div>
         <div id="division">

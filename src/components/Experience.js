@@ -5,8 +5,9 @@ import foresightLogo from "../assets/foresightLogo.png";
 import cafaekLogo from "../assets/cafaekLogo.png";
 import seekhleLogo from "../assets/seekhleLogo.png";
 import gkmtLogo from "../assets/gkmtLogo.png";
-import arrowToRight from "../assets/arrowToRight.svg";
-import $, { easing } from "jquery";
+import arrowToRightDark from "../assets/arrowToRightDark.svg";
+import arrowToRightLight from "../assets/arrowToRightLight.svg";
+import $ from "jquery";
 
 const EXPERIENCE_INDEXES = {
   SWIGGY: 0,
@@ -89,7 +90,7 @@ const EXPERIENCE = [
   },
 ];
 
-export const Experience = () => {
+export const Experience = (props) => {
   const [activeExperienceIndex, setActiveExperienceIndex] = useState(0);
 
   useEffect(() => {
@@ -109,7 +110,7 @@ export const Experience = () => {
   }
 
   return (
-    <div id="experience">
+    <div id="experience" className={(props.theme == props.THEMES.DARK ? 'darkThemeFont' : 'lightThemeFont') + ' reveal'}>
       <p id="head">EXPERIENCE</p>
       <div id="detailsAccordion">
         {EXPERIENCE.map((val, index) => {
@@ -123,7 +124,7 @@ export const Experience = () => {
                 }}
               >
                 <p>{val.companyName}</p>
-                <img src={arrowToRight}></img>
+                <img src={props.theme == props.THEMES.DARK ? arrowToRightDark : arrowToRightLight}></img>
               </div>
               <div
                 id={"accordionBody" + index}

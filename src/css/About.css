@@ -1,19 +1,27 @@
+.darkThemeFont {
+  color: white;
+}
+
+.lightThemeHeadFont{
+  color: #3D3D3D;
+}
+
 #about {
     width: 90%;
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 120px;
+    overflow: clip;
   }
 
   #about #head {
     font-size: 110px;
-    color: white;
     text-align: left;
     line-height: 110px;
     font-weight: 300;
     margin: 0px;
-    margin-top: 120px;
     padding-bottom: 0px;
     cursor: default;
   }
@@ -31,7 +39,6 @@
 
   #about #basicsDiv #hello{
     width: 70%;
-    color: white;
     font-size: 45px;
     font-weight: 500;
     line-height: 60px;
@@ -46,9 +53,8 @@
   }
 
   #about #basicsDiv #detailsDiv p{
-    color: white;
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 500;
     line-height: 22px;
     text-align: left;
     margin: 0px;
@@ -65,13 +71,13 @@
   #profile #summaryDiv{
     display: flex;
     margin-top: 30px;
+    /* overflow: clip; */
   }
 
   #profile #summaryDiv #summary{
     width: 60%;
-    color: white;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 30px;
     text-align: left;
     margin: 0px;
@@ -82,10 +88,14 @@
     height: 60px;
     margin-left: auto;
     cursor: pointer;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    top: 0px;
+    /* right: 30px; */
   }
 
   #profile #summaryDiv #scrollToTopButtonWeb:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   #about #scrollToTopButtonMobile{
@@ -98,17 +108,16 @@
   }
 
   #about #scrollToTopButtonMobile:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   #about #otherThings{
-    margin-top: 80px;
+    padding-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   #about #otherThings #section #sectionHead{
-    color: #ababab;
     font-size: 40px;
     font-weight: 300;
     line-height: 46px;
@@ -120,18 +129,22 @@
   #about #otherThings #section #sectionSubhead{
     width: 70%;
     display: flex;
-    color: white;
     font-size: 15px;
     line-height: 23px;
     margin: 0px;
     margin-left: auto;
     text-align: left;
+    cursor: default;
   }
 
   #about #otherThings #section #sectionSubhead p{
     font-size: 15px;
     line-height: 23px;
     margin: 0px;
+  }
+
+  #about #otherThings #section #sectionSubhead:hover{
+    transform: scaleY(1.4);
   }
 
   #about #otherThings #section #sectionSubhead span{
@@ -142,10 +155,13 @@
 }
 
 @media (max-width : 504px){
+  #about{
+    padding-top: 80px;
+  }
+
   #about #head{
     font-size: 60px;
     line-height: 68px;
-    margin-top: 80px;
   }
 
   #about #profile{
@@ -179,7 +195,6 @@
     width: 80%;
     font-size: 12px;
     line-height: 18px;
-    font-weight: 100;
   }
 
   #profile #summaryDiv{
@@ -188,7 +203,7 @@
 
   #about #otherThings{
     grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
+    padding-top: 40px;
   } 
 
   #profile #summaryDiv #scrollToTopButtonWeb{
@@ -225,10 +240,13 @@
 }
 
 @media (min-width: 505px) and (max-width : 768px){
+
+  #about{
+    padding-top: 85px;
+  }
+
   #about #head{
     font-size: 70px;
-    line-height: 76px;
-    margin-top: 85px;
   }
 
   #about #profile{
@@ -262,7 +280,6 @@
     width: 85%;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 100;
   }
 
   #profile #summaryDiv{
@@ -282,7 +299,7 @@
 
   #about #otherThings{
     grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
+    padding-top: 40px;
   } 
 
   #about #otherThings #section #sectionHead{
@@ -310,10 +327,13 @@
 }
 
 @media (min-width: 769px) and (max-width : 1024px){
+  #about{
+    padding-top: 90px;
+  }
+
   #about #head{
     font-size: 85px;
     line-height: 93px;
-    margin-top: 90px;
   }
 
   #about #profile{
@@ -347,7 +367,6 @@
     width: 85%;
     font-size: 15px;
     line-height: 22px;
-    font-weight: 100;
   }
 
   #profile #summaryDiv{
@@ -383,10 +402,13 @@
 }
 
 @media (min-width: 1025px) and (max-width : 1200px){
+  #about{
+    padding-top: 110px;
+  }
+
   #about #head{
     font-size: 90px;
     line-height: 98px;
-    margin-top: 110px;
   }
 
   #about #profile{
@@ -420,7 +442,6 @@
     width: 85%;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 100;
   }
 
   #profile #summaryDiv{
@@ -456,10 +477,13 @@
 }
 
 @media (min-width: 1440px){
+  #about{
+    padding-top: 110px;
+  }
+
   #about #head{
     font-size: 120px;
     line-height: 128px;
-    margin-top: 110px;
   }
 
   #about #profile{
@@ -493,7 +517,6 @@
     width: 80%;
     font-size: 20px;
     line-height: 26px;
-    font-weight: 100;
   }
 
   #profile #summaryDiv{

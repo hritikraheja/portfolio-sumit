@@ -1,25 +1,65 @@
 @keyframes scrollText {
-  from   { transform: translateX(0%); }
-  to { transform: translateX(50%); }
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .App {
   text-align: center;
-  font-family: 'Mersad', sans-serif;
+  font-family: "Mersad", sans-serif;
   position: relative;
   display: block;
-  overflow: hidden;
+  overflow: clip;
 }
 
-.App #background{
+.darkThemeFont {
+  color: white;
+}
+
+.lightThemeFont {
+  color: #181a18;
+}
+
+.darkThemeFont:hover {
+  color: white;
+}
+
+.lightThemeFont:hover {
+  color: #181a18;
+}
+
+.App #darkBackground {
   width: 100%;
   height: 100%;
-  background-color: #221E1E;
+  background-color: #221e1e;
   position: absolute;
-  top:0px;
-  left:0px;
+  top: 0px;
+  left: 0px;
   bottom: 0px;
+}
 
+.App #lightBackground {
+  width: 100%;
+  height: 100%;
+  background-color: #f3ece7;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
 }
 
 .App-logo {
@@ -27,82 +67,87 @@
   pointer-events: none;
 }
 
-nav{
+nav {
   width: 50%;
   height: 30px;
   display: flex;
   justify-content: right;
   z-index: 1;
   position: relative;
-  padding-top: 30px;
   margin-left: auto;
+  padding-top: 30px;
 }
 
-nav p{
-  color: white;
-  height: fit-content;
-  text-align: center;
-  display: block;
+nav a {
   margin: auto;
-  font-family: 'Mersad';
+  text-decoration: none;
+}
+
+nav p {
+  text-align: center;
+  display: inline-block;
+  font-family: "Mersad";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 15px;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-nav p:hover{
+nav p:hover {
   font-weight: 600;
   transform: scale(1.1);
 }
 
-nav button{
+nav img {
   width: 30px;
   height: 30px;
-  background-color: #393737;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  padding: auto;
-  line-height: 30px;
-  display: block;
-  color: white;
-  font-size: 12px;
-  margin: 0px auto;
+  margin: auto;
   cursor: pointer;
+  border-radius: 50%;
 }
 
-nav button:hover{
-  transform: scale(1.2);
+nav img:hover {
+  transform: scale(1.3);
 }
 
-.App .marquee{
+.App .marquee {
   position: relative;
-  background-color: #d9d9d9;
-  padding: 20px 0px;
-  /* width: 100%; */
-  margin-top: 80px;
 }
 
-.App .marquee #psd{
+.backgroundLight {
+  background-color: #d9d9d9;
+}
+
+.backgroundDark {
+  background-color: #3d3d3d;
+}
+
+.App .marquee #psd {
   display: flex;
   border: none;
   outline: none;
+  padding: 20px 0px;
+  margin-top: 80px;
 }
 
-.App .marquee #psd img{
+.App .marquee #psd img {
   display: block;
   margin-right: 22px;
   height: 36px;
 }
 
-.App #starAndExperience{
+.App #starAndExperience {
   width: 100%;
   position: relative;
 }
 
-.App #starAndExperience #sideStar{
+.App #starAndExperience #sideStar {
   position: absolute;
   width: 450px;
   height: 450px;
@@ -110,10 +155,28 @@ nav button:hover{
   bottom: -220px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App #lineAndWork {
+  width: 100%;
+  position: relative;
+}
+
+.App #lineAndWork #lineShape {
+  position: absolute;
+  width: 200px;
+  height: 425px;
+  left: -20px;
+  bottom: -125px;
+  z-index: 0;
+}
+
+.App #themeChangeMask {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
 }
 
 .App-header {
@@ -131,93 +194,144 @@ nav button:hover{
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App #scrollToTopButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 3;
+  display: none;
 }
 
-@media (max-width : 480px) {
+.App #scrollToTopButton img {
+  width: 60px;
+  height: 60px;
+}
+
+.buttonBackgroundDark {
+  background-color: #221e1e;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 4px #aaa;
+  -moz-box-shadow: 0 0 20px 4px #aaa;
+  box-shadow: 0px 0px 20px 4px #aaa;
+}
+
+.buttonBackgroundLight {
+  background-color: #f3ece7;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 4px gray;
+  -moz-box-shadow: 0 0 20px 4px gray;
+  box-shadow: 0px 0px 20px 4px gray;
+}
+
+@media (max-width: 480px) {
   nav {
     width: 90%;
     margin-right: auto;
   }
 
-  nav p{
+  nav p {
     margin: auto auto auto 0px;
   }
 
-  nav button{
-    margin: auto auto auto 0px;
-  }
-
-  .App .marquee #psd img{
+  .App .marquee #psd img {
     height: 20px;
   }
 
-  .App #starAndExperience #sideStar{
+  .App #starAndExperience #sideStar {
     width: 188px;
     height: 188px;
     right: -25px;
     bottom: -88px;
   }
+
+  .App #scrollToTopButton {
+    bottom: 30px;
+    right: 30px;
+  }
+  .App #scrollToTopButton img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
-@media (min-width : 481px) and (max-width : 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   nav {
     width: 85%;
   }
-  .App .marquee #psd img{
+  .App .marquee #psd img {
     height: 25px;
   }
 
-  .App #starAndExperience #sideStar{
+  .App #starAndExperience #sideStar {
     width: 248px;
     height: 248px;
     right: -35px;
     bottom: -98px;
   }
+
+  .App #scrollToTopButton {
+    bottom: 40px;
+    right: 40px;
+  }
+  .App #scrollToTopButton img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
-@media (min-width : 769px) and (max-width : 1024px) {
-  nav{
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
     width: 70%;
   }
-  .App .marquee #psd img{
+  .App .marquee #psd img {
     height: 30px;
   }
-  .App #starAndExperience #sideStar{
+  .App #starAndExperience #sideStar {
     width: 350px;
     height: 350px;
     right: -45px;
     bottom: -150px;
   }
+
+  .App #scrollToTopButton {
+    bottom: 50px;
+    right: 50px;
+  }
+  .App #scrollToTopButton img {
+    width: 55px;
+    height: 55px;
+  }
 }
 
-@media (min-width : 1440px){
+@media (min-width: 1440px) {
   nav {
     width: 50%;
   }
 
-  nav p{
+  nav p {
     font-size: 18px;
   }
 
-  nav button{
+  nav img {
     width: 40px;
     height: 40px;
   }
 
-  .App .marquee #psd img{
+  .App .marquee #psd img {
     height: 40px;
   }
-  .App #starAndExperience #sideStar{
+  .App #starAndExperience #sideStar {
     width: 500px;
     height: 500px;
     bottom: -240px;
     right: -55px;
+  }
+  .App #scrollToTopButton {
+    bottom: 50px;
+    right: 50px;
+  }
+  .App #scrollToTopButton img {
+    width: 70px;
+    height: 70px;
   }
 }

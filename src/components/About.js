@@ -1,10 +1,9 @@
 import React from "react";
 import "../css/About.css";
-import scrollToTopButton from '../assets/scrollToTopButton.svg'
 
-function About() {
+function About(props) {
   return (
-    <div id="about">
+    <div id="about" className={(props.theme == props.THEMES.DARK ? 'darkThemeFont' : 'lightThemeFont') + ' reveal'}>
       <p id="head">ABOUT</p>
       <div id="profile">
         <div id="basicsDiv">
@@ -30,12 +29,11 @@ function About() {
             projects. As a result of doing freelance work for some of my
             clients, I have improved my skills.
           </p>
-          <img src={scrollToTopButton} id='scrollToTopButtonWeb'></img>
         </div>
       </div>
-      <div id='otherThings'>
+      <div id='otherThings' className="reveal">
         <div id="section">
-            <p id="sectionHead">HOBBIES</p>
+            <p id="sectionHead" className={props.theme == props.THEMES.DARK ? 'darkThemeHeadFont' : 'lightThemeHeadFont'}>HOBBIES</p>
             <p id="sectionSubhead">DESIGNING</p>
             <p id="sectionSubhead">TRAVELLING</p>
             <p id="sectionSubhead">TECH ENTHUSIAST</p>
@@ -44,7 +42,7 @@ function About() {
         </div>
 
         <div id="section">
-            <p id="sectionHead">SERVICES</p>
+            <p id="sectionHead" className={props.theme == props.THEMES.DARK ? 'darkThemeHeadFont' : 'lightThemeHeadFont'}>SERVICES</p>
             <p id="sectionSubhead">WEBSITE DESIGN</p>
             <p id="sectionSubhead">UI/UX DESIGN</p>
             <p id="sectionSubhead">BRAND IDENTITY</p>
@@ -53,7 +51,7 @@ function About() {
         </div>
 
         <div id="section">
-            <p id="sectionHead">SKILLS</p>
+            <p id="sectionHead" className={props.theme == props.THEMES.DARK ? 'darkThemeHeadFont' : 'lightThemeHeadFont'}>SKILLS</p>
             <p id="sectionSubhead">CREATIVITY</p>
             <p id="sectionSubhead">TYPOGRAPHY</p>
             <p id="sectionSubhead">MARKETING</p>
@@ -62,7 +60,7 @@ function About() {
         </div>
 
         <div id="section">
-            <p id="sectionHead">SOFTWARES</p>
+            <p id="sectionHead" className={props.theme == props.THEMES.DARK ? 'darkThemeHeadFont' : 'lightThemeHeadFont'}>SOFTWARES</p>
             <div id="sectionSubhead">
                 <p>PHOTOSHOP</p>
                 <span>80%</span>
@@ -81,7 +79,6 @@ function About() {
             </div>
         </div>
       </div>
-      <img src={scrollToTopButton} id='scrollToTopButtonMobile'></img>
     </div>
   );
 }

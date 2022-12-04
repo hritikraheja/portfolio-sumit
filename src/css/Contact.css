@@ -1,55 +1,537 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.darkThemeSubHeadFont {
+  color: #c6c6c6;
+  text-decoration-color: #c6c6c6;
+}
+
+.lightThemeSubHeadFont {
+  color: #3D3D3D;
+  text-decoration-color: #3D3D3D;
+}
+
 #contact {
+  width: 90%;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+}
+
+#contact #head {
+  font-size: 110px;
+  text-align: left;
+  line-height: 110px;
+  font-weight: 300;
+  margin: 0px;
+  padding-bottom: 0px;
+  cursor: default;
+}
+
+#contact #contactDetails {
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+#contact #contactDetails #left {
+  width: 50%;
+}
+
+#contact #contactDetails #left #contactHead {
+  width: fit-content;
+  display: flex;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 60px;
+  margin-bottom: 0px;
+  cursor: default;
+}
+
+#contact #contactDetails #left #contactHead img {
+  width: 40px;
+  height: fit-content;
+  margin-left: 15px;
+  padding: auto;
+}
+
+#contact #contactDetails #left #contactHead:hover img {
+  transform: rotate(90deg) scale(1.05);
+  transition-duration: 500ms;
+}
+
+#contact #contactDetails #left #contactHead:hover {
+  /* transform: scaleY(1.2); */
+  font-weight: 600;
+}
+
+#contact #contactDetails #left #contactSubhead {
+  font-size: 35px;
+  line-height: 50px;
+  margin-bottom: 40px;
+  font-weight: 100;
+  text-align: left;
+  text-decoration: underline;
+}
+
+#contact #contactDetails #rightWeb {
+  width: 210px;
+  margin: auto 8% auto auto;
+}
+
+#contact #contactDetails #rightWeb p {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 0px;
+  font-weight: 100;
+  text-align: left;
+}
+
+#contact #contactDetails #rightWeb img {
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-top: 120px;
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#contact #contactDetails #rightMob {
+  display: none;
+  margin-top: 50px;
+}
+
+#contact #contactDetails #rightMob img {
+  width: 35%;
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#contact #contactDetails #rightMob p {
+  width: 42%;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 18px;
+  height: fit-content;
+margin: auto 10% auto auto;
+}
+
+#contact #footer {
+  display: block;
+  margin-top: 80px;
+}
+
+#contact #footer #footerLevel1 {
+  display: flex;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+#contact #footer #footerLevel1 a {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 100;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#contact #footer #footerLevel1 a:hover {
+  transform: scale(1.1);
+}
+
+#contact #footer #footerLevel2 {
+  display: flex;
+  width: 22%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#contact #footer #footerLevel2 i {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+#contact #footer #footerLevel2 i:hover {
+  font-weight: 500;
+  transform: scale(1.2);
+}
+
+#contact #footer #footerLevel3 {
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+  margin: 50px auto 0px;
+  padding-bottom: 20px;
+}
+
+#contact #footer #footerLevel3 p {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 100;
+  cursor: default;
+}
+
+#contact #footer #footerLevel3 p:hover {
+  font-weight: 500;
+  transform: scale(1.2);
+}
+
+@media (max-width: 580px) {
+  #contact{
+    padding-top: 150px;
+  }
+
+  #contact #head {
+    font-size: 65px;
+    padding-top: 0px;
+    line-height: 70px;
+  }
+
+  #contact #contactDetails {
     width: 90%;
     display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-}
+    margin-top: 40px;
+  }
 
-#contact #head{
-    font-size: 110px;
-    color: white;
-    text-align: left;
-    line-height: 110px;
-    font-weight: 300;
-    margin: 0px;
-    padding-bottom: 0px;
-    cursor: default;
-}
+  #contact #contactDetails #left {
+    width: 100%;
+  }
 
-#contact #contactDetails{
-    display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-top: 60px;
-}
+  #contact #contactDetails #left #contactHead {
+    font-size: 30px;
+    line-height: 40px;
+  }
 
-#contact #contactDetails #left{
-    width: 50%;
-}
+  #contact #contactDetails #left #contactHead img {
+    width: 25px;
+  }
 
-#contact #contactDetails #left #contactHead{
-    color: white;
-    font-size: 45px;
-    line-height: 60px;
-}
+  #contact #contactDetails #left #contactSubhead {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
 
-#contact #contactDetails #left #contactHead img{
-    width: 35px;
-    height: 35px;
-    margin-left: 20px;
-}
-
-#contact #contactDetails #left #contactSubhead{
-    
-}
-
-#contact #contactDetails #rightWeb{
-    width: 40%;
-    margin-left: auto;
-}
-
-#contact #contactDetails #rightMob{
+  #contact #contactDetails #rightWeb {
     display: none;
+  }
+
+  #contact #contactDetails #rightMob {
+    display: flex;
+  }
+
+  #content #footer {
+    margin-top: 80px;
+  }
+
+  #content #footer #footerLevel1 {
+    width: 75%;
+  }
+
+  #content #footer #footerLevel1 a {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  #content #footer #footerLevel2 {
+    width: 50%;
+    margin-top: 15px;
+  }
+
+  #content #footer #footerLevel2 i {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  #content #footer #footerLevel3 {
+    width: 90%;
+  }
+
+  #content #footer #footerLevel3 p {
+    font-size: 11px;
+    line-height: 15px;
+  }
 }
+
+@media (min-width: 581px) and (max-width: 768px) {
+  #contact #head {
+    font-size: 72px;
+    padding-top: 50px;
+    line-height: 82px;
+  }
+
+  #contact #contactDetails {
+    width: 90%;
+    display: block;
+    margin-top: 40px;
+  }
+
+  #contact #contactDetails #left {
+    width: 100%;
+  }
+
+  #contact #contactDetails #left #contactHead {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  #contact #contactDetails #left #contactHead img {
+    width: 30px;
+  }
+
+  #contact #contactDetails #left #contactSubhead {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 35px;
+  }
+
+  #contact #contactDetails #rightWeb {
+    display: none;
+  }
+
+  #contact #contactDetails #rightMob {
+    display: flex;
+  }
+
+  #contact #contactDetails #rightMob img {
+    width: 30%;
+  }
+
+  #contact #contactDetails #rightMob p {
+    font-size: 18px;
+    line-height: 24px;
+    width: 50%;
+  }
+
+  #content #footer {
+    margin-top: 80px;
+  }
+
+  #content #footer #footerLevel1 {
+    width: 60%;
+  }
+
+  #content #footer #footerLevel1 a {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 100;
+  }
+
+  #content #footer #footerLevel2 {
+    width: 40%;
+    margin-top: 15px;
+  }
+
+  #content #footer #footerLevel2 i {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #content #footer #footerLevel3 {
+    width: 75%;
+  }
+
+  #content #footer #footerLevel3 p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #contact #head {
+    font-size: 85px;
+    line-height: 93px;
+  }
+
+  #contact #contactDetails {
+    width: 95%;
+    margin-top: 40px;
+  }
+
+  #contact #contactDetails #left #contactHead {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  #contact #contactDetails #left #contactHead img {
+    width: 35px;
+  }
+
+  #contact #contactDetails #left #contactSubhead {
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+
+  #contact #contactDetails #rightWeb{
+    width: 190px;
+    margin: auto 8% auto auto;
+  }
+
+  #contact #contactDetails #rightWeb p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  #contact #contactDetails #rightWeb img {
+    width: 80%;
+    margin: 80px auto auto;
+  }
+
+  #content #footer {
+    margin-top: 80px;
+  }
+
+  #content #footer #footerLevel1 {
+    width: 60%;
+  }
+
+  #content #footer #footerLevel1 a {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 100;
+  }
+
+  #content #footer #footerLevel2 {
+    width: 30%;
+    margin-top: 15px;
+  }
+
+  #content #footer #footerLevel2 i {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #content #footer #footerLevel3 {
+    width: 75%;
+    margin-top: 50px;
+  }
+
+  #content #footer #footerLevel3 p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #contact #head {
+      font-size: 90px;
+      line-height: 98px;
+    }
+  
+    #contact #contactDetails #left #contactHead {
+      font-size: 45px;
+      line-height: 52px;
+    }
+  
+    #contact #contactDetails #left #contactHead img {
+      width: 38px;
+    }
+  
+    #contact #contactDetails #left #contactSubhead {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 40px;
+    }
+
+    #contact #contactDetails #rightWeb{
+        width: 220px;
+        display: block;
+        height: fit-content;
+        margin: auto 5% auto auto;
+      }
+    
+      #contact #contactDetails #rightWeb p {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      #contact #contactDetails #rightWeb img {
+        width: 80%;
+        margin: 80px auto auto;
+      }
+  }
+
+  @media (min-width: 1440px) {
+    #contact #head {
+      font-size: 120px;
+      line-height: 128px;
+    }
+  
+    #contact #contactDetails #left #contactHead {
+      font-size: 48px;
+      line-height: 64px;
+    }
+  
+    #contact #contactDetails #left #contactHead img {
+      width: 42px;
+    }
+  
+    #contact #contactDetails #left #contactSubhead {
+      font-size: 48px;
+      line-height: 55px;
+      margin-bottom: 45px;
+    }
+
+    #contact #contactDetails #rightWeb{
+        width: 250px;
+        display: block;
+        height: fit-content;
+        margin: auto 5% auto auto;
+      }
+    
+      #contact #contactDetails #rightWeb p {
+        font-size: 25px;
+        line-height: 32px;
+      }
+
+      #contact #contactDetails #rightWeb img {
+        width: 80%;
+        margin: 80px auto auto;
+      }
+
+      #content #footer {
+        margin-top: 85px;
+      }
+    
+      #content #footer #footerLevel1 a {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 100;
+      }
+    
+      #content #footer #footerLevel2 i {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      #content #footer #footerLevel3 {
+        margin-top: 60px;
+      }
+    
+      #content #footer #footerLevel3 p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+  }

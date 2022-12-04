@@ -13,16 +13,15 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 120px;
 }
 
 #experience #head {
   font-size: 110px;
-  color: white;
   text-align: left;
   line-height: 110px;
   font-weight: 300;
   margin: 0px;
-  margin-top: 120px;
   padding-bottom: 0px;
   cursor: default;
 }
@@ -40,10 +39,9 @@
 }
 
 #experience #detailsAccordion .accordionItem .accordionHeader p {
-  color: white;
   font-size: 45px;
   line-height: 50px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 0px;
   cursor: pointer;
 }
@@ -83,7 +81,6 @@
 
 #experience #detailsAccordion .accordionItem .accordionBody #details {
   width: 70%;
-  color: white;
 }
 
 #experience
@@ -105,7 +102,7 @@
   p {
   font-size: 45px;
   line-height: 50px;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 0px;
 }
 
@@ -116,7 +113,7 @@
   #details
   #nameAndLogo
   p:hover {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #experience
@@ -165,7 +162,7 @@
   p {
   font-size: 20px;
   line-height: 20px;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 0px;
 }
 
@@ -178,7 +175,7 @@
   span {
   font-size: 20px;
   line-height: 20px;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 0px;
   margin-left: auto;
 }
@@ -186,14 +183,13 @@
 #experience #detailsAccordion .accordionItem .accordionBody #details #summary {
   width: 100%;
   text-align: left;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 50px;
   font-size: 20px;
   line-height: 30px;
 }
 
 #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv {
-  color: white;
   width: fit-content;
   height: fit-content;
   display: block;
@@ -206,6 +202,7 @@
   width: fit-content;
   font-size: 17px;
   line-height: 23px;
+  font-weight: 600;
   margin-bottom: 30px;
   text-align: left;
 }
@@ -223,10 +220,10 @@
   span {
   display: block;
   width: fit-content;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 23px;
   text-align: left;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 @media (max-width: 580px) {
