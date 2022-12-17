@@ -226,7 +226,116 @@
   font-weight: 400;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 420px) {
+
+  #experience{
+    padding-top: 80px;
+  }
+
+  #experience #head {
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  #experience #detailsAccordion {
+    margin-top: 30px;
+    width: 98%;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionHeader {
+    margin-top: 15px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionHeader p {
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionHeader img {
+    height: 25px;
+    margin: auto 0px auto 20px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo {
+    margin-top: 15px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo  p{
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #nameAndLogo  img{
+    height: 32px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration
+  p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #profileAndDuration
+  span {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details
+  #summary {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+
+  #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv #skills span{
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 100;
+  }
+}
+
+@media (min-width : 421px) and (max-width: 580px) {
+  #experience{
+    padding-top: 80px;
+  }
+
   #experience #head {
     font-size: 65px;
     line-height: 70px;

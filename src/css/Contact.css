@@ -196,9 +196,93 @@ margin: auto 10% auto auto;
   transform: scale(1.2);
 }
 
-@media (max-width: 580px) {
+@media (max-width: 420px) {
   #contact{
-    padding-top: 150px;
+    padding-top: 100px;
+  }
+
+  #contact #head {
+    font-size: 50px;
+    padding-top: 0px;
+    line-height: 58px;
+  }
+
+  #contact #contactDetails {
+    width: 95%;
+    display: block;
+    margin-top: 30px;
+  }
+
+  #contact #contactDetails #left {
+    width: 100%;
+  }
+
+  #contact #contactDetails #left #contactHead {
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  #contact #contactDetails #left #contactHead img {
+    width: 25px;
+  }
+
+  #contact #contactDetails #left #contactSubhead {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  #contact #contactDetails #rightWeb {
+    display: none;
+  }
+
+  #contact #contactDetails #rightMob {
+    display: flex;
+  }
+
+  #contact #contactDetails #rightMob p{
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #content #footer {
+    margin-top: 80px;
+  }
+
+  #content #footer #footerLevel1 {
+    width: 75%;
+  }
+
+  #content #footer #footerLevel1 a {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  #content #footer #footerLevel2 {
+    width: 50%;
+    margin-top: 15px;
+  }
+
+  #content #footer #footerLevel2 i {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  #content #footer #footerLevel3 {
+    width: 90%;
+  }
+
+  #content #footer #footerLevel3 p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+@media (min-width : 421px) and (max-width: 580px) {
+  #contact{
+    padding-top: 100px;
   }
 
   #contact #head {

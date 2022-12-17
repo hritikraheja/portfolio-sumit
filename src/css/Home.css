@@ -3,6 +3,10 @@
     to{ transform: rotate(-360deg); }
 }
 
+#home #pr{
+    
+}
+
 #home {
   width: 90%;
   position: relative;
@@ -104,14 +108,22 @@
 }
 
 @media (max-width : 436px) {
+    #home {
+        padding-top: 40px;
+    }
+
+    #home #name {
+        margin-top: 40px;
+    }
+
     #home #head{
-        font-size: 65px;
-        margin-top: 50px;
-        line-height: 75px;
+        font-size: 55px;
+        margin-top: 30px;
+        line-height: 65px;
     }
 
     #home #head img{
-        width: 50px;
+        width: 45px;
     }
 
     #home #section{
@@ -144,7 +156,7 @@
         margin-top: 0px;
     }
 
-    #home #section #socialMedia p, #home #section #bio p{
+    #home #section #socialMedia span, #home #section #bio p{
         width: 100%;
         font-size: 10px;
         line-height: 16px;
@@ -152,6 +164,11 @@
 }
 
 @media(min-width : 437px) and (max-width : 638px) {
+
+    #home {
+        padding-top: 50px;
+    }
+
     #home #name{
         font-size: 15px;
         margin-top: 60px;

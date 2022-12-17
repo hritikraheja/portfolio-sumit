@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../css/Work.css";
 import "animate.css";
-import WorkSamples from "../assets/WorkSamples";
 
 export const Work = (props) => {
   const WORK_INDEXES = {
@@ -12,125 +11,6 @@ export const Work = (props) => {
   };
 
   const [activeIndex, setActiveIndex] = useState(WORK_INDEXES.WEBSITE_DESIGN);
-
-  const WORK = [
-    [
-      {
-        name: "Foresight Opinion Trading",
-        type: "Website Design",
-        year: "2022",
-        image: WorkSamples.websiteDesign1,
-      },
-      {
-        name: "Foresight Crypto Trading",
-        type: "Website Design",
-        year: "2022",
-        image: WorkSamples.websiteDesign2,
-      },
-      {
-        name: "Pose it Perfect Analyzer",
-        type: "Website Design",
-        year: "2021",
-        image: WorkSamples.websiteDesign3,
-      },
-      {
-        name: "Graphic Design Portfolio",
-        type: "Website Design",
-        year: "2022",
-        image: WorkSamples.websiteDesign4,
-      },
-    ],
-    [
-      {
-        name: "Swiggy Instamart D2C Hipstreet",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.inAppMarketing1,
-      },
-      {
-        name: "Swiggy Mega Saving Festival",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.inAppMarketing2,
-      },
-      {
-        name: "Swiggy Instamart Diwali Payday",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.inAppMarketing3,
-      },
-      {
-        name: "Swiggy Instamart Strawberry",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.inAppMarketing4,
-      },
-    ],
-    [
-      {
-        name: "Swiggy Instamart D2C Hipstreet",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity1,
-      },
-      {
-        name: "Swiggy Mega Saving Festival",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity2,
-      },
-      {
-        name: "Swiggy Instamart Diwali Payday",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity3,
-      },
-      {
-        name: "Swiggy Instamart Strawberry",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity4,
-      },
-      {
-        name: "Swiggy Instamart Guru Nanak Jayanti",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity5,
-      },
-      {
-        name: "Swiggy Instamart Kartik Purnima",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity6,
-      },
-    ],
-    [
-      {
-        name: "Tara Indepay Appstore",
-        type: "Overview Screenshots",
-        year: "2022",
-        image: WorkSamples.freelanceProjects1,
-      },
-      {
-        name: "Foresight Appstore",
-        type: "Overview Screenshots",
-        year: "2022",
-        image: WorkSamples.freelanceProjects2,
-      },
-      {
-        name: "Josh Talks Pitch Deck",
-        type: "Presentation Design",
-        year: "2022",
-        image: WorkSamples.freelanceProjects3,
-      },
-      {
-        name: "Freelance Clients",
-        type: "Print Design",
-        year: "2022",
-        image: WorkSamples.freelanceProjects4,
-      },
-    ],
-  ];
 
   function changeActiveIndex(newIndex) {
     if (activeIndex != newIndex) {
@@ -198,15 +78,18 @@ export const Work = (props) => {
           </p>
         </div>
         <div id="workContent">
-          {WORK[activeIndex].map(({ name, type, year, image }) => {
+          {props.WORK[activeIndex].map((workEntity , index) => {
             return (
-              <div id="workEntity">
-                <img src={image}></img>
+              <div id="workEntity" onClick={() => {
+                props.openWorkPreviewDialog
+                (WORK_INDEXES.WEBSITE_DESIGN, index)
+                }}>
+                <img src={workEntity.image}></img>
                 <div id="nameAndYear">
-                  <p>{name}</p>
-                  <span>{year}</span>
+                  <p>{workEntity.name}</p>
+                  <span>{workEntity.year}</span>
                 </div>
-                <p id="type">{type}</p>
+                <p id="type">{workEntity.type}</p>
               </div>
             );
           })}

@@ -13,17 +13,19 @@ function SocialMediaPosts(props) {
       <Marquee
         gradient={false}
         direction="right"
-        speed={12}
+        speed={15}
+        play={!props.sliderImageDialogOpen}
         children={
           <div
             id="topSlider"
           >
-            {Posts
+            {Posts.slice(12)
             .map((src, key) => {
               return (
                 <img
                   src={src}
                   key={key}
+                  onClick={() => {props.openSliderImageDialog(src)}}
                 ></img>
               );
             })}
@@ -33,19 +35,20 @@ function SocialMediaPosts(props) {
       <Marquee
         gradient={false}
         direction="left"
-        speed={12}
+        speed={15}
+        play={!props.sliderImageDialogOpen}
         children={
           <div
             id="bottomSlider"
           >
             {
-            // [...Posts.slice(6), ...Posts.slice(0, 6).reverse()]
-            Posts.reverse()
+            Posts.slice(0, 12)
             .map((src, key) => {
               return (
                 <img
                   src={src}
                   key={key}
+                  onClick={() => {props.openSliderImageDialog(src)}}
                 ></img>
               );
             })}

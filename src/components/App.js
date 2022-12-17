@@ -15,13 +15,20 @@ import pesheSeDesignerDarkTheme from "../assets/pesheSeDesignerDarkTheme.svg";
 import pesheSeDesignerLightTheme from "../assets/pesheSeDesignerLightTheme.svg";
 import scrollToTopButtonDark from '../assets/scrollToTopButtonDark.svg'
 import scrollToTopButtonLight from '../assets/scrollToTopButtonLight.svg'
+import foresightWebDesign from '../assets/websiteDesigns/foresightWebDesign.png'
+import foresightMobDesign from '../assets/websiteDesigns/foresightMobDesign.png'
+import mobileFrame from '../assets/mobileFrame.svg'
+import post1 from '../assets/socialMediaPosts/post1.png'
 import Cookies from "universal-cookie";
-
 import Marquee from "react-fast-marquee";
 import { Work } from "./Work";
+import {WEB_DESIGNS} from '../assets/WebDesigns'
 import Contact from "./Contact";
 import { useEffect, useState } from "react";
 import 'animate.css'
+import ReactLoading from 'react-loading'
+import WorkSamples from "../assets/WorkSamples";
+
 
 function App() {
 
@@ -29,8 +36,22 @@ function App() {
     LIGHT : 0,
     DARK : 1
   }
+
+  const WORK_PREVIEWS = {
+    WEBSITE_DESIGN : 0,
+    IN_APP_MARKETING : 1,
+    BRAND_IDENTITY : 2,
+    FREELANCE_PROJECTS : 3
+  }
+
   const [theme, setTheme] = useState(THEMES.DARK)
   const [loaded, setLoaded] = useState(false)
+  const [sliderImageDialogOpen, setSliderImageDialogOpen] = useState(false)
+  const [sliderImageDialogSrc, setSliderImageDialogSrc] = useState(post1)
+  const [websitePreviewDialogOpen, setWebsitePreviewDialogOpen] = useState(false)
+  const [websitePreviewWebImgSrc, setWebsitePreviewWebImgSrc] = useState(foresightWebDesign)
+  const [websitePreviewWebMobSrc, setWebsitePreviewMobImgSrc] = useState(foresightMobDesign)
+  const [previewLoaded, setPreviewLoaded] = useState(false)
   const COOKIES = new Cookies()
 
   useEffect(() => {
@@ -39,6 +60,137 @@ function App() {
     }
     setLoaded(true)
   }, [])
+
+  const WORK = [
+    [
+      {
+        name: "Eulify Benepik LLC",
+        type: "Website Design",
+        year: "2022",
+        image: WorkSamples.websiteDesign1,
+        webDesign : WEB_DESIGNS.EULIFY.webDesign,
+        mobDesign : WEB_DESIGNS.EULIFY.mobDesign,
+        hasMobileDesign : false
+      },
+      {
+        name: "Foresight Crypto Trading",
+        type: "Website Design",
+        year: "2022",
+        image: WorkSamples.websiteDesign2,
+        webDesign : WEB_DESIGNS.FORESIGHT_CRYPTO.webDesign,
+        mobDesign : WEB_DESIGNS.FORESIGHT_CRYPTO.mobDesign,
+        hasMobileDesign : true
+      },
+      {
+        name: "Foresight Opinion Trading",
+        type: "Website Design",
+        year: "2022",
+        image: WorkSamples.websiteDesign3,
+        webDesign : WEB_DESIGNS.FORESIGHT.webDesign,
+        mobDesign : WEB_DESIGNS.FORESIGHT.mobDesign,
+        hasMobileDesign : true
+      },
+      {
+        name: "Pose it Perfect Analyzer",
+        type: "Website Design",
+        year: "2021",
+        image: WorkSamples.websiteDesign4,
+        webDesign : WEB_DESIGNS.POSE_IT_PERFECT.webDesign,
+        mobDesign : WEB_DESIGNS.POSE_IT_PERFECT.mobDesign,
+        hasMobileDesign : false
+      },
+    ],
+    [
+      {
+        name: "Swiggy Instamart D2C Hipstreet",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.inAppMarketing1
+      },
+      {
+        name: "Swiggy Mega Saving Festival",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.inAppMarketing2,
+      },
+      {
+        name: "Swiggy Instamart Diwali Payday",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.inAppMarketing3,
+      },
+      {
+        name: "Swiggy Instamart Strawberry",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.inAppMarketing4,
+      },
+      {
+        name: "Swiggy Instamart Guru Nanak Jayanti",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.inAppMarketing5,
+      },
+      {
+        name: "Swiggy Instamart Kartik Purnima",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.inAppMarketing6,
+      },
+    ],
+    [
+      {
+        name: "Swiggy Instamart D2C Hipstreet",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.brandIdentity1,
+      },
+      {
+        name: "Swiggy Mega Saving Festival",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.brandIdentity2,
+      },
+      {
+        name: "Swiggy Instamart Diwali Payday",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.brandIdentity3,
+      },
+      {
+        name: "Swiggy Instamart Strawberry",
+        type: "In-App Compaign",
+        year: "2022",
+        image: WorkSamples.brandIdentity4,
+      },
+    ],
+    [
+      {
+        name: "Tara Indepay Appstore",
+        type: "Overview Screenshots",
+        year: "2022",
+        image: WorkSamples.freelanceProjects1,
+      },
+      {
+        name: "Foresight Appstore",
+        type: "Overview Screenshots",
+        year: "2022",
+        image: WorkSamples.freelanceProjects2,
+      },
+      {
+        name: "Josh Talks Pitch Deck",
+        type: "Presentation Design",
+        year: "2022",
+        image: WorkSamples.freelanceProjects3,
+      },
+      {
+        name: "Freelance Clients",
+        type: "Print Design",
+        year: "2022",
+        image: WorkSamples.freelanceProjects4,
+      },
+    ],
+  ];
 
   function changeTheme(newTheme){
     setTheme(newTheme)
@@ -82,6 +234,54 @@ function App() {
     }
   }
 
+  function openSliderImageDialog(imgSrc){
+    setSliderImageDialogSrc(imgSrc)
+    setSliderImageDialogOpen(true)
+  }
+
+  function switchWebsitePreviewDialogView(){
+    let divA = document.getElementById('websiteDesignDivWeb')
+    let divB = document.getElementById('websiteDesignDivMob')
+    if(window.getComputedStyle(divA).display == 'block'){
+      divA.style.display = 'none';
+      divB.style.display = 'block';
+    } else {
+      divA.style.display = 'block';
+      divB.style.display = 'none';
+    }
+  }
+
+  function openWorkPreviewDialog(previewIndex, contentIndex){
+    if(previewIndex == WORK_PREVIEWS.WEBSITE_DESIGN){
+      if(window.innerWidth <= 480){
+        document.getElementById('websiteDesignDivWeb').style.display = 'none'
+        document.getElementById('websiteDesignDivMob').style.display = 'block'
+        document.getElementById('switchButton').style.display = 'none'
+      } else {
+        document.getElementById('websiteDesignDivWeb').style.display = 'block'
+        document.getElementById('websiteDesignDivMob').style.display = 'none'
+        document.getElementById('switchButton').style.display = 'block'
+        if(WORK[previewIndex][contentIndex].hasMobileDesign){
+          document.getElementById('switchButton').style.display = 'block'
+        } else {
+          document.getElementById('switchButton').style.display = 'none'
+        }
+      }
+      const webPreviewImg = document.getElementById('websitePreviewWebImg')
+      const mobPreviewImg = document.getElementById('websitePreviewMobImg')
+      setWebsitePreviewDialogOpen(true)
+      setWebsitePreviewWebImgSrc(WORK[previewIndex][contentIndex].webDesign)
+      setWebsitePreviewMobImgSrc(WORK[previewIndex][contentIndex].mobDesign)
+      webPreviewImg.onload = function(){
+        setPreviewLoaded(true)
+      }
+      mobPreviewImg.onload = function(){
+        setPreviewLoaded(true)
+      }
+    }
+  }
+  
+  document.body.style.overflowY = sliderImageDialogOpen || websitePreviewDialogOpen ? 'hidden' : 'scroll'
   return (
     <div
     className={theme == THEMES.DARK ? 'darkThemeFont App' : 'lightThemeFont App'}
@@ -105,7 +305,7 @@ function App() {
           className="reveal"
           gradient={false}
           direction="right"
-          speed={12}
+          speed={15}
           children={
             <div id='psd' className={theme == THEMES.DARK ? 'backgroundLight' : 'backgroundDark'}>
               {[...Array(12)].map((n, key) => {
@@ -120,11 +320,11 @@ function App() {
           <img id="sideStar" src={theme == THEMES.DARK ? starDarkTheme : starLightTheme}></img>
         </div>
         <div id="lineAndWork">
-          <Work theme={theme} THEMES = {THEMES}></Work>
+          <Work theme={theme} THEMES = {THEMES} WORK={WORK} openWorkPreviewDialog={openWorkPreviewDialog}></Work>
           <img id="lineShape" src={theme == THEMES.DARK ? lineShapeDarkTheme : lineShapeLightTheme}>
           </img>
         </div>
-      <SocialMediaPosts></SocialMediaPosts>
+      <SocialMediaPosts sliderImageDialogOpen = {sliderImageDialogOpen} openSliderImageDialog = {openSliderImageDialog}></SocialMediaPosts>
         <Contact theme={theme} THEMES = {THEMES}></Contact>
       </div>
       <div id="scrollToTopButton">
@@ -133,6 +333,34 @@ function App() {
       <div id="themeChangeMask" className="animate__animated animate__fadeIn animate__fadeOut">
       {theme == THEMES.DARK ? <img id="darkBackground" src={darkBackground}></img>
         : <div id="lightBackground"></div>}
+      </div>
+      <div id="dialogDiv" className="animate__animated fadeIn" style={{display : (sliderImageDialogOpen || websitePreviewDialogOpen) ? 'block' : 'none'}}>
+        <dialog id="sliderImageViewDialog" open={sliderImageDialogOpen} style={{display : sliderImageDialogOpen ? 'block' : 'none'}}>
+          <img src={sliderImageDialogSrc}></img>
+          <button onClick={() => setSliderImageDialogOpen(false)}><i className="fa-solid fa-xmark"></i></button>
+        </dialog>
+        <dialog id="websitePreviewDialog" open={websitePreviewDialogOpen} style={{display : websitePreviewDialogOpen ? 'block' : 'none'}}>
+          <div id="websiteDesignDivWeb">
+            <div id="websitePreview">
+              <ReactLoading id='loader' style={{display : !previewLoaded?'block' : 'none'}} className="loader mt-50" type='spokes' color='#ffffff'></ReactLoading>
+              <img style={{'visibility' : !previewLoaded ? 'hidden' : 'visible'}} id="websitePreviewWebImg" src={websitePreviewWebImgSrc}></img>
+            </div>
+          </div>
+          <div id="websiteDesignDivMob">
+            <div id="websitePreview">
+            <ReactLoading id='loader' style={{display : !previewLoaded?'block' : 'none'}}  className="loader mt-50" type='spokes' color='#ffffff'></ReactLoading>
+            <img style={{'visibility' : !previewLoaded ? 'hidden' : 'visible'}} id="websitePreviewMobImg" src={websitePreviewWebMobSrc}></img>
+            </div>
+            <img id="frame" src ={mobileFrame}></img>
+          </div>
+          <button id="switchButton" onClick={switchWebsitePreviewDialogView}>Switch View</button>
+          <button id="closeDialogButton" onClick={() => {
+            setWebsitePreviewDialogOpen(false)
+            setPreviewLoaded(false)
+            setWebsitePreviewMobImgSrc(null)
+            setWebsitePreviewWebImgSrc(null)
+          }}><i className="fa-solid fa-xmark"></i></button>
+        </dialog>
       </div>
     </div>
   );

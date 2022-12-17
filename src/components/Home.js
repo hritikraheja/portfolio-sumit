@@ -3,11 +3,14 @@ import "../css/Home.css";
 import enterIconDarkTheme from "../assets/enterIconDarkTheme.svg";
 import enterIconLightTheme from "../assets/enterIconLightTheme.svg";
 import hireMeCircleDarkTheme from "../assets/hireMeCircleDarkTheme.svg";
+import laptopBackground from '../assets/laptopBackground.svg'
+import post1 from '../assets/socialMediaPosts/post1.png'
 import hireMeCircleLightTheme from "../assets/hireMeCircleLightTheme.svg";
 
 export const Home = (props) => {
   return (
     <div id="home" className={props.theme == props.THEMES.DARK ? 'darkThemeFont' : 'lightThemeFont'}>
+      {/* <img id="pr" src={post1}></img> */}
       <p id="name">SUMIT MITTAL</p>
       <p id="head">
         I <span>CREATE</span> DESIGNS<br></br>

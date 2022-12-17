@@ -81,6 +81,7 @@
 }
 
 #work #navAndContent #workContent {
+  width: 70%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: -30px;
@@ -133,9 +134,63 @@
   cursor: default;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 420px) {
   #work {
-    padding-top: 100px;
+    padding-top: 80px;
+  }
+  #work #head {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  #work #navAndContent {
+    margin-top: 30px;
+    display: block;
+  }
+  #work #navAndContent #nav {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin: 30px 0px 0px;
+    padding: 0px 0px 10px;
+  }
+
+  #work #navAndContent #nav p {
+    font-size: 14px;
+    line-height: 17px;
+    display: inline-block;
+    width: 150px;
+  }
+
+  #work #navAndContent #workContent{
+    margin-top: 20px;
+  }
+
+  #work #navAndContent #workContent #workEntity img,
+  #work #navAndContent #workContent #workEntity #nameAndYear {
+    width: 92%;
+  }
+
+  #work #navAndContent #workContent #workEntity #nameAndYear p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  #work #navAndContent #workContent #workEntity #nameAndYear span {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  #work #navAndContent #workContent #workEntity #type {
+    width: 92%;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 3px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 580px) {
+  #work {
+    padding-top: 80px;
   }
   #work #head {
     font-size: 65px;

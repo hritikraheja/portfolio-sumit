@@ -154,7 +154,83 @@
     margin-left: auto;
 }
 
-@media (max-width : 504px){
+@media (max-width : 420px){
+  #about{
+    padding-top: 80px;
+  }
+
+  #about #head{
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  #about #profile{
+    width: 95%;
+    margin-top : 40px;
+  }
+
+  #about #basicsDiv #hello{
+    font-size: 25px;
+    line-height: 32px;
+    width: 60%;
+  }
+
+  #about #basicsDiv #detailsDiv{
+    width: 40%;
+  }
+  #about #basicsDiv #detailsDiv p{
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  #about #basicsDiv #detailsDiv #web{
+    display: none;
+  }
+
+  #about #basicsDiv #detailsDiv #mobile{
+    display: block;
+  }
+
+  #profile #summaryDiv #summary{
+    width: 90%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #profile #summaryDiv{
+    margin-top: 30px;
+  }
+
+  #about #otherThings{
+    grid-template-columns: 1fr 1fr;
+    padding-top: 30px;
+  } 
+
+  #about #otherThings #section #sectionHead{
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  #about #otherThings #section #sectionSubhead{
+    width: 80%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #about #otherThings #section #sectionSubhead p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #about #otherThings #section #sectionSubhead span{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media(min-width: 421px) and (max-width : 504px){
   #about{
     padding-top: 80px;
   }
