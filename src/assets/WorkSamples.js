@@ -16,6 +16,12 @@ import brandIdentity1 from "./workAssets/brandIdentity1.png"
 import brandIdentity2 from "./workAssets/brandIdentity2.png"
 import brandIdentity3 from "./workAssets/brandIdentity3.png"
 import brandIdentity4 from "./workAssets/brandIdentity4.png"
+import hipstreetPreview from './workAssets/hipstreetPreview.png'
+import megaFestivalPreview from './workAssets/megaFestivalPreview.png'
+import diwaliPreview from './workAssets/diwaliPreview.png'
+import strawberryPreview from './workAssets/strawberryPreview.png'
+import guruNanakPreview from './workAssets/guruNanakPreview.png'
+import kartikPurnimaPreview from './workAssets/kartikPurnimaPreview.png'
 
 const WORK_SAMPLES = {
     websiteDesign1 : websiteDesign1,
@@ -36,6 +42,12 @@ const WORK_SAMPLES = {
     brandIdentity2 :brandIdentity2,
     brandIdentity3 :brandIdentity3,
     brandIdentity4 :brandIdentity4,
+    hipstreetPreview, 
+    guruNanakPreview,
+    diwaliPreview,
+    megaFestivalPreview,
+    kartikPurnimaPreview,
+    strawberryPreview
 }
 
 export default WORK_SAMPLES

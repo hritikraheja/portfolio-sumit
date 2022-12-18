@@ -78,11 +78,11 @@ export const Work = (props) => {
           </p>
         </div>
         <div id="workContent">
-          {props.WORK[activeIndex].map((workEntity , index) => {
+          {props.WORK[activeIndex].map((workEntity , contentIndex) => {
             return (
               <div id="workEntity" onClick={() => {
                 props.openWorkPreviewDialog
-                (WORK_INDEXES.WEBSITE_DESIGN, index)
+                (activeIndex, contentIndex)
                 }}>
                 <img src={workEntity.image}></img>
                 <div id="nameAndYear">

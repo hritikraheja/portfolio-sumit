@@ -351,7 +351,7 @@ nav img:hover {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  position: static;
+  position: relative;
 }
 
 
@@ -378,6 +378,41 @@ nav img:hover {
   margin-left: auto;
   margin-right: auto;
   width: 100px;
+}
+
+.App #switchSlideBtns{
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.App #switchSlideBtns #leftBtn{
+  margin-right: auto;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.251);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.App #switchSlideBtns #rightBtn{
+  margin-left: auto;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.251);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.App #switchSlideBtns #leftBtn:hover, .App #switchSlideBtns #rightBtn:hover{
+  transform: scale(1.1);
 }
 
 @media (max-width : 420px) {
