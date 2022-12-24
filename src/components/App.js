@@ -218,6 +218,36 @@ function App() {
         slides: FREELANCE_PROJECTS_SLIDES.FORESIGHT_SLIDES,
       },
     ],
+    [
+      {
+        name: "Tara Indepay Appstore",
+        type: "Overview Screenshots",
+        year: "2022",
+        image: WorkSamples.freelanceProjects1,
+        slides: FREELANCE_PROJECTS_SLIDES.TARA_SLIDES,
+      },
+      {
+        name: "Foresight Appstore",
+        type: "Overview Screenshots",
+        year: "2022",
+        image: WorkSamples.freelanceProjects2,
+        slides: FREELANCE_PROJECTS_SLIDES.FORESIGHT_SLIDES,
+      },
+      {
+        name: "Josh Talks Pitch Deck",
+        type: "Presentation Design",
+        year: "2022",
+        image: WorkSamples.freelanceProjects3,
+        slides: FREELANCE_PROJECTS_SLIDES.JOSH_SLIDES,
+      },
+      {
+        name: "Freelance Clients",
+        type: "Print Design",
+        year: "2022",
+        image: WorkSamples.freelanceProjects4,
+        slides: FREELANCE_PROJECTS_SLIDES.FORESIGHT_SLIDES,
+      },
+    ],
   ];
 
   function changeTheme(newTheme) {
