@@ -39,6 +39,11 @@
   animation-duration: 0.5s;
 }
 
+.fadeInRightAnimation2x {
+  animation: backInRight;
+  animation-duration: 0.8s;
+}
+
 #work {
   width: 90%;
   display: block;
@@ -89,6 +94,7 @@
 
 #work #navAndContent #workContent #workEntity {
   margin-top: 30px;
+  position: relative;
 }
 
 #work #navAndContent #workContent #workEntity img {

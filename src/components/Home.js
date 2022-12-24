@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Home.css";
+import '../css/HomeHeadAndImage.css'
 import enterIconDarkTheme from "../assets/enterIconDarkTheme.svg";
 import enterIconLightTheme from "../assets/enterIconLightTheme.svg";
 import hireMeCircleDarkTheme from "../assets/hireMeCircleDarkTheme.svg";

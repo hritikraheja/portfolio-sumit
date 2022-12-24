@@ -1,7 +1,7 @@
 #socialMediaPosts{
     width: 100%;
     position: relative;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 #socialMediaPosts #header{
@@ -79,7 +79,7 @@
     }
     
     #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
-        height: 100px;
+        height: 150px;
         margin: 0px 5px;
     }
 }
@@ -112,39 +112,11 @@
     }
     
     #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
-        height: 140px;
+        height: 160px;
         margin: 0px 5px;
     }
 }
 
-@media (min-width : 421px) and (max-width : 480px) {
-    #socialMediaPosts #header p{
-        font-size: 20px;
-        line-height: 23px;
-    }
-
-    #socialMediaPosts #header span{
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    #socialMediaPosts .marquee #topSlider{
-        margin-top: 40px;
-    }
-    
-    #socialMediaPosts .marquee #bottomSlider{
-        width: 100%;
-        display: flex;
-        border: none;
-        outline: none;
-        margin-top: 20px;
-    }
-    
-    #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
-        height: 140px;
-        margin: 0px 5px;
-    }
-}
 
 @media (min-width : 481px) and (max-width: 768px) {
     #socialMediaPosts #header{
@@ -166,7 +138,7 @@
     }
 
     #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
-        height: 150px;
+        height: 175px;
         margin: 0px 5px;
     }
 }

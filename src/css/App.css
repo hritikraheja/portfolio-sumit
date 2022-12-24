@@ -89,7 +89,7 @@ nav p {
   font-family: "Mersad";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   vertical-align: middle;
   height: 30px;
   line-height: 30px;
@@ -101,7 +101,6 @@ nav p {
 
 nav p:hover {
   font-weight: 600;
-  transform: scale(1.1);
 }
 
 nav img {
@@ -133,7 +132,7 @@ nav img:hover {
   border: none;
   outline: none;
   padding: 20px 0px;
-  margin-top: 80px;
+  margin-top:150px;
 }
 
 .App .marquee #psd img {

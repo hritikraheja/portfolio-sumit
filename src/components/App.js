@@ -29,6 +29,7 @@ import "animate.css";
 import ReactLoading from "react-loading";
 import WorkSamples from "../assets/WorkSamples";
 import { FREELANCE_PROJECTS_SLIDES } from "../assets/FreelanceProjectsSlides";
+import ReactPlayer from "react-player";
 
 function App() {
   const THEMES = {
@@ -68,6 +69,10 @@ function App() {
 
   useEffect(() => {
     if (freelanceProjectSlides.length != 0) {
+      document.getElementById("websitePreviewMobImg").style.display = "none";
+      setTimeout(() => {
+        document.getElementById("websitePreviewMobImg").style.display = "block";
+      }, 1);
       setWebsitePreviewMobImgSrc(
         freelanceProjectSlides[freelanceProjectsSlideIndex]
       );
@@ -245,6 +250,21 @@ function App() {
     scrollFunction();
   };
 
+  document.onclick = function (e) {
+    console.log(e.target.id);
+    if (e.target.id == "websitePreviewDialog") {
+      setWebsitePreviewDialogOpen(false);
+      setPreviewLoaded(false);
+      setWebsitePreviewMobImgSrc(null);
+      setWebsitePreviewWebImgSrc(null);
+      setFreelanceProjectsSlideIndex(0);
+      setFreelanceProjectSlides([]);
+      document.getElementById("switchSlideBtns").style.display = "none";
+    } else if (e.target.id == "sliderImageViewDialog") {
+      setSliderImageDialogOpen(false);
+    }
+  };
+
   function scrollFunction() {
     let btn = document.getElementById("scrollToTopButton");
     if (
@@ -318,8 +338,8 @@ function App() {
       document.getElementById("switchSlideBtns").style.display = "flex";
       const mobPreviewImg = document.getElementById("websitePreviewMobImg");
       setWebsitePreviewDialogOpen(true);
-      setFreelanceProjectSlides(WORK[previewIndex][contentIndex].slides)
-      
+      setFreelanceProjectSlides(WORK[previewIndex][contentIndex].slides);
+
       mobPreviewImg.onload = function () {
         setPreviewLoaded(true);
       };
@@ -391,7 +411,7 @@ function App() {
         </nav>
         <Home theme={theme} THEMES={THEMES}></Home>
         <Marquee
-          className="reveal"
+          // className="reveal"
           gradient={false}
           direction="right"
           speed={15}
@@ -487,9 +507,6 @@ function App() {
           style={{ display: sliderImageDialogOpen ? "block" : "none" }}
         >
           <img src={sliderImageDialogSrc}></img>
-          <button onClick={() => setSliderImageDialogOpen(false)}>
-            <i className="fa-solid fa-xmark"></i>
-          </button>
         </dialog>
         <dialog
           id="websitePreviewDialog"
@@ -528,10 +545,36 @@ function App() {
                 src={websitePreviewWebMobSrc}
               ></img>
               <div id="switchSlideBtns">
-                <button id="leftBtn" style={{'display' : freelanceProjectsSlideIndex > 0 ? 'block' : 'none'}} onClick={() => {setFreelanceProjectsSlideIndex(freelanceProjectsSlideIndex -1)}}>
+                <button
+                  id="leftBtn"
+                  style={{
+                    display: freelanceProjectsSlideIndex > 0 ? "block" : "none",
+                  }}
+                  onClick={() => {
+                    setFreelanceProjectsSlideIndex(
+                      freelanceProjectsSlideIndex - 1
+                    )
+                    document.getElementById("websitePreviewMobImg").className="animate__animated animate__fadeInLeft"
+                  }}
+                >
                   <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <button id="rightBtn" style={{'display' : freelanceProjectsSlideIndex < freelanceProjectSlides.length-1 ? 'block' : 'none'}} onClick={() => {setFreelanceProjectsSlideIndex(freelanceProjectsSlideIndex + 1)}}>
+                <button
+                  id="rightBtn"
+                  style={{
+                    display:
+                      freelanceProjectsSlideIndex <
+                      freelanceProjectSlides.length - 1
+                        ? "block"
+                        : "none",
+                  }}
+                  onClick={() => {
+                    setFreelanceProjectsSlideIndex(
+                      freelanceProjectsSlideIndex + 1
+                    )
+                    document.getElementById("websitePreviewMobImg").className="animate__animated animate__fadeInRight"
+                  }}
+                >
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
               </div>
@@ -540,20 +583,6 @@ function App() {
           </div>
           <button id="switchButton" onClick={switchWebsitePreviewDialogView}>
             Switch View
-          </button>
-          <button
-            id="closeDialogButton"
-            onClick={() => {
-              setWebsitePreviewDialogOpen(false);
-              setPreviewLoaded(false);
-              setWebsitePreviewMobImgSrc(null);
-              setWebsitePreviewWebImgSrc(null);
-              setFreelanceProjectsSlideIndex(0);
-              setFreelanceProjectSlides([]);
-              document.getElementById("switchSlideBtns").style.display = "none";
-            }}
-          >
-            <i className="fa-solid fa-xmark"></i>
           </button>
         </dialog>
       </div>

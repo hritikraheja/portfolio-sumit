@@ -47,40 +47,49 @@
   width: 50%;
 }
 
+#contact #contactDetails #left #contactGroup{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #contact #contactDetails #left #contactHead {
   width: fit-content;
   display: flex;
-  font-size: 45px;
+  font-size: 38px;
   font-weight: 400;
-  line-height: 60px;
+  line-height: 45px;
   margin-bottom: 0px;
-  cursor: default;
+  text-decoration: none;
 }
 
 #contact #contactDetails #left #contactHead img {
-  width: 40px;
+  width: 35px;
   height: fit-content;
   margin-left: 15px;
   padding: auto;
 }
 
-#contact #contactDetails #left #contactHead:hover img {
+#contact #contactDetails #left #contactGroup:hover #contactHead img {
   transform: rotate(90deg) scale(1.05);
   transition-duration: 500ms;
 }
 
-#contact #contactDetails #left #contactHead:hover {
+#contact #contactDetails #left #contactGroup:hover #contactHead{
   /* transform: scaleY(1.2); */
   font-weight: 600;
 }
 
 #contact #contactDetails #left #contactSubhead {
-  font-size: 35px;
-  line-height: 50px;
+  font-size: 28px;
+  line-height: 35px;
   margin-bottom: 40px;
   font-weight: 100;
   text-align: left;
   text-decoration: underline;
+}
+
+#contact #contactDetails #left #contactGroup:hover #contactSubhead{
+  font-weight: 300;
 }
 
 #contact #contactDetails #rightWeb {
@@ -152,7 +161,8 @@ margin: auto 10% auto auto;
 }
 
 #contact #footer #footerLevel1 a:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  font-weight: 600;
 }
 
 #contact #footer #footerLevel2 {
@@ -193,7 +203,7 @@ margin: auto 10% auto auto;
 
 #contact #footer #footerLevel3 p:hover {
   font-weight: 500;
-  transform: scale(1.2);
+  transform: scalex(0.9);
 }
 
 @media (max-width: 420px) {
@@ -454,21 +464,6 @@ margin: auto 10% auto auto;
     margin-top: 40px;
   }
 
-  #contact #contactDetails #left #contactHead {
-    font-size: 42px;
-    line-height: 48px;
-  }
-
-  #contact #contactDetails #left #contactHead img {
-    width: 35px;
-  }
-
-  #contact #contactDetails #left #contactSubhead {
-    font-size: 25px;
-    line-height: 32px;
-    margin-bottom: 40px;
-  }
-
   #contact #contactDetails #rightWeb{
     width: 190px;
     margin: auto 8% auto auto;
@@ -561,21 +556,6 @@ margin: auto 10% auto auto;
     #contact #head {
       font-size: 120px;
       line-height: 128px;
-    }
-  
-    #contact #contactDetails #left #contactHead {
-      font-size: 48px;
-      line-height: 64px;
-    }
-  
-    #contact #contactDetails #left #contactHead img {
-      width: 42px;
-    }
-  
-    #contact #contactDetails #left #contactSubhead {
-      font-size: 48px;
-      line-height: 55px;
-      margin-bottom: 45px;
     }
 
     #contact #contactDetails #rightWeb{

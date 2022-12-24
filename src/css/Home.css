@@ -3,10 +3,6 @@
     to{ transform: rotate(-360deg); }
 }
 
-#home #pr{
-    
-}
-
 #home {
   width: 90%;
   position: relative;
@@ -27,9 +23,9 @@
 }
 
 #home #head {
-  font-size: 110px;
+  font-size: 115px;
   text-align: left;
-  line-height: 110px;
+  line-height: 125px;
   font-weight: 300;
   margin: 0px;
   margin-top: 60px;
@@ -57,6 +53,7 @@
     text-align: left;
     font-size: 15px;
     line-height: 22px;
+    margin-top: 50px;
 }
 
 #home #section #division{
@@ -101,29 +98,17 @@
     font-weight: 500;
     display: block;
     text-align: left;
+    padding-top: 0px;
 }
 
 #home #section #socialMedia span:hover, #home #section #bio p:hover{
-    transform: scaleY(1.5)
+    font-weight: 700;
+    transform: scaleX(0.95) scaleY(1.2);
 }
 
 @media (max-width : 436px) {
     #home {
         padding-top: 40px;
-    }
-
-    #home #name {
-        margin-top: 40px;
-    }
-
-    #home #head{
-        font-size: 55px;
-        margin-top: 30px;
-        line-height: 65px;
-    }
-
-    #home #head img{
-        width: 45px;
     }
 
     #home #section{
@@ -136,7 +121,7 @@
     }
 
     #home #section #division:nth-last-of-type(1){
-        flex: 0.8;
+        flex: 0.7;
     }
 
     #home #section #socialMedia{
@@ -160,6 +145,7 @@
         width: 100%;
         font-size: 10px;
         line-height: 16px;
+        font-weight: 300;
     }
 }
 
@@ -172,16 +158,6 @@
     #home #name{
         font-size: 15px;
         margin-top: 60px;
-    }
-
-    #home #head{
-        font-size: 80px;
-        margin-top: 50px;
-        line-height: 88px;
-    }
-
-    #home #head img{
-        width: 65px;
     }
 
     #home #section{
@@ -227,16 +203,6 @@
         margin-top: 80px;
     }
 
-    #home #head{
-        font-size: 60px;
-        margin-top: 50px;
-        line-height: 68px;
-    }
-
-    #home #head img{
-        width: 45px;
-    }
-
     #home #section{
         margin-top: 0px;
     }
@@ -262,16 +228,6 @@
     #home #name{
         font-size: 18px;
         margin-top: 80px;
-    }
-
-    #home #head{
-        font-size: 72px;
-        margin-top: 50px;
-        line-height: 80px;
-    }
-
-    #home #head img{
-        width: 65px;
     }
 
     #home #section{
@@ -301,16 +257,6 @@
         margin-top: 80px;
     }
 
-    #home #head{
-        font-size: 95px;
-        margin-top: 50px;
-        line-height: 103px;
-    }
-
-    #home #head img{
-        width: 65px;
-    }
-
     #home #section{
         margin-top: 0px;
     }
@@ -328,17 +274,5 @@
 
     #home #section #socialMedia p, #home #section #bio p{
         font-size: 16px;
-    }
-}
-
-@media (min-width : 1440px) {
-    #home #head{
-        font-size: 120px;
-        margin-top: 50px;
-        line-height: 128px;
-    }
-
-    #home #name{
-        font-size: 24px;
     }
 }

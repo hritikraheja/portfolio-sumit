@@ -12,7 +12,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 120px;
+    padding-top: 150px;
     overflow: clip;
   }
 
@@ -50,10 +50,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    cursor: default;
   }
 
   #about #basicsDiv #detailsDiv p{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 22px;
     text-align: left;
@@ -112,7 +113,7 @@
   }
 
   #about #otherThings{
-    padding-top: 80px;
+    padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -122,14 +123,14 @@
     font-weight: 300;
     line-height: 46px;
     margin: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: left;
   }
 
   #about #otherThings #section #sectionSubhead{
     width: 70%;
     display: flex;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 23px;
     margin: 0px;
     margin-left: auto;
@@ -138,13 +139,9 @@
   }
 
   #about #otherThings #section #sectionSubhead p{
-    font-size: 15px;
+    font-size: 13px;
     line-height: 23px;
     margin: 0px;
-  }
-
-  #about #otherThings #section #sectionSubhead:hover{
-    transform: scaleY(1.4);
   }
 
   #about #otherThings #section #sectionSubhead span{
@@ -353,7 +350,7 @@
   }
 
   #profile #summaryDiv #summary{
-    width: 85%;
+    width: 75%;
     font-size: 14px;
     line-height: 20px;
   }
@@ -440,7 +437,7 @@
   }
 
   #profile #summaryDiv #summary{
-    width: 85%;
+    width: 70%;
     font-size: 15px;
     line-height: 22px;
   }
@@ -515,7 +512,7 @@
   }
 
   #profile #summaryDiv #summary{
-    width: 85%;
+    width: 60%;
     font-size: 18px;
     line-height: 24px;
   }
@@ -590,7 +587,7 @@
   }
 
   #profile #summaryDiv #summary{
-    width: 80%;
+    width: 60%;
     font-size: 20px;
     line-height: 26px;
   }

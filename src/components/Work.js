@@ -8,6 +8,7 @@ export const Work = (props) => {
     IN_APP_MARKETING: 1,
     BRAND_IDENTITY: 2,
     FREELANCE_PROJECTS: 3,
+    VIDEOGRAPHY : 4
   };
 
   const [activeIndex, setActiveIndex] = useState(WORK_INDEXES.WEBSITE_DESIGN);
@@ -29,8 +30,8 @@ export const Work = (props) => {
   }
 
   let activeNavItemStyle = {
-    fontWeight: "500",
-    transform: "scaleY(1.5)",
+    fontWeight: "600",
+    transform: "scaleY(1.2)",
     cursor: "default",
   };
 
@@ -47,7 +48,7 @@ export const Work = (props) => {
           <p
             style={activeIndex == 0 ? activeNavItemStyle : {}}
             onClick={() => {
-              changeActiveIndex(0);
+              changeActiveIndex(WORK_INDEXES.WEBSITE_DESIGN);
             }}
           >
             WEBSITE DESIGN
@@ -55,7 +56,7 @@ export const Work = (props) => {
           <p
             style={activeIndex == 1 ? activeNavItemStyle : {}}
             onClick={() => {
-              changeActiveIndex(1);
+              changeActiveIndex(WORK_INDEXES.IN_APP_MARKETING);
             }}
           >
             IN APP MARKETING
@@ -63,7 +64,7 @@ export const Work = (props) => {
           <p
             style={activeIndex == 2 ? activeNavItemStyle : {}}
             onClick={() => {
-              changeActiveIndex(2);
+              changeActiveIndex(WORK_INDEXES.BRAND_IDENTITY);
             }}
           >
             BRAND IDENTITY
@@ -71,10 +72,18 @@ export const Work = (props) => {
           <p
             style={activeIndex == 3 ? activeNavItemStyle : {}}
             onClick={() => {
-              changeActiveIndex(3);
+              changeActiveIndex(WORK_INDEXES.FREELANCE_PROJECTS);
             }}
           >
             FREELANCE PROJECTS
+          </p>
+          <p
+            style={activeIndex == 3 ? activeNavItemStyle : {}}
+            onClick={() => {
+              changeActiveIndex(WORK_INDEXES.VIDEOGRAPHY);
+            }}
+          >
+            VIDEOGRAPHY
           </p>
         </div>
         <div id="workContent">

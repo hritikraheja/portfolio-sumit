@@ -13,7 +13,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 120px;
+  padding-top: 150px;
 }
 
 #experience #head {
@@ -260,6 +260,14 @@
   #detailsAccordion
   .accordionItem
   .accordionBody
+  #details{
+    margin-right: 15px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
   #details
   #nameAndLogo {
     margin-top: 15px;
@@ -291,8 +299,11 @@
   #details
   #profileAndDuration
   p {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
+    /* margin-right: 10px; */
+    text-align: left;
+    width: 100%;
   }
 
   #experience
@@ -302,8 +313,10 @@
   #details
   #profileAndDuration
   span {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
+    text-align: right;
+    width: 100%;
   }
 
   #experience
@@ -312,13 +325,14 @@
   .accordionBody
   #details
   #summary {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
     margin-top: 20px;
+    text-align: left;
   }
 
   #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 16px;
     margin-bottom: 15px;
@@ -350,13 +364,21 @@
   }
 
   #experience #detailsAccordion .accordionItem .accordionHeader p {
-    font-size: 30px;
+    font-size: 27px;
     line-height: 35px;
   }
 
   #experience #detailsAccordion .accordionItem .accordionHeader img {
     height: 25px;
     margin: auto 0px auto 20px;
+  }
+
+  #experience
+  #detailsAccordion
+  .accordionItem
+  .accordionBody
+  #details{
+    margin-right: 15px;
   }
 
   #experience
@@ -374,7 +396,7 @@
   .accordionBody
   #details
   #nameAndLogo  p{
-    font-size: 30px;
+    font-size: 27px;
     line-height: 35px;
   }
 
@@ -394,8 +416,11 @@
   #details
   #profileAndDuration
   p {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
+    margin-right: 10px;
+    text-align: left;
+    width: 100%;
   }
 
   #experience
@@ -405,8 +430,10 @@
   #details
   #profileAndDuration
   span {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
+    text-align: right;
+    width: 100%;
   }
 
   #experience
@@ -415,13 +442,13 @@
   .accordionBody
   #details
   #summary {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
     margin-top: 20px;
   }
 
   #experience #detailsAccordion .accordionItem .accordionBody #skillsDiv p {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 16px;
     margin-bottom: 15px;
   }
