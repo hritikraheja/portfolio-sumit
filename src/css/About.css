@@ -162,35 +162,41 @@
   }
 
   #about #profile{
-    width: 95%;
+    width: 96%;
     margin-top : 40px;
   }
 
   #about #basicsDiv #hello{
-    font-size: 25px;
+    font-size: 23px;
     line-height: 32px;
-    width: 60%;
+    width: 100%;
   }
 
   #about #basicsDiv #detailsDiv{
-    width: 40%;
+    width: fit-content;
+    margin-left: auto;
+    white-space: nowrap;
   }
   #about #basicsDiv #detailsDiv p{
-    font-size: 10px;
+    font-size: 9px;
     line-height: 16px;
   }
 
   #about #basicsDiv #detailsDiv #web{
     display: none;
+    font-size: 9px;
+    line-height: 16px;
   }
 
   #about #basicsDiv #detailsDiv #mobile{
     display: block;
+    font-size: 9px;
+    line-height: 16px;
   }
 
   #profile #summaryDiv #summary{
-    width: 90%;
-    font-size: 12px;
+    width: 95%;
+    font-size: 10px;
     line-height: 18px;
   }
 
@@ -204,25 +210,25 @@
   } 
 
   #about #otherThings #section #sectionHead{
-    font-size: 22px;
+    font-size: 18px;
     line-height: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-top: 30px;
   }
 
   #about #otherThings #section #sectionSubhead{
     width: 80%;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
   }
 
   #about #otherThings #section #sectionSubhead p{
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
   }
 
   #about #otherThings #section #sectionSubhead span{
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
   }
 }

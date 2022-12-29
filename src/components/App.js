@@ -29,7 +29,7 @@ import "animate.css";
 import ReactLoading from "react-loading";
 import WorkSamples from "../assets/WorkSamples";
 import { FREELANCE_PROJECTS_SLIDES } from "../assets/FreelanceProjectsSlides";
-import ReactPlayer from "react-player";
+import YouTubePlayer from "react-youtube";
 
 function App() {
   const THEMES = {
@@ -42,6 +42,7 @@ function App() {
     IN_APP_MARKETING: 1,
     BRAND_IDENTITY: 2,
     FREELANCE_PROJECTS: 3,
+    VIDEOGRAPHY : 4
   };
 
   const [theme, setTheme] = useState(THEMES.DARK);
@@ -59,6 +60,8 @@ function App() {
   const [freelanceProjectSlides, setFreelanceProjectSlides] = useState([]);
   const [previewLoaded, setPreviewLoaded] = useState(false);
   const COOKIES = new Cookies();
+  const [videoPlayerDialogOpen, setVideoPlayerDialogOpen] = useState(false)
+  const [videoPlayerVideoId, setVideoPlayerVideoId] = useState('')
 
   useEffect(() => {
     if (COOKIES.get("theme")) {
@@ -290,8 +293,12 @@ function App() {
       setFreelanceProjectsSlideIndex(0);
       setFreelanceProjectSlides([]);
       document.getElementById("switchSlideBtns").style.display = "none";
+
     } else if (e.target.id == "sliderImageViewDialog") {
       setSliderImageDialogOpen(false);
+    } else if(e.target.id == "videoPlayerDialog"){
+      setVideoPlayerDialogOpen(false)
+      setVideoPlayerVideoId('')
     }
   };
 
@@ -310,6 +317,11 @@ function App() {
   function openSliderImageDialog(imgSrc) {
     setSliderImageDialogSrc(imgSrc);
     setSliderImageDialogOpen(true);
+  }
+
+  function openVideoPlayerDialog(videoId){
+    setVideoPlayerVideoId(videoId)
+    setVideoPlayerDialogOpen(true)
   }
 
   function switchWebsitePreviewDialogView() {
@@ -373,11 +385,14 @@ function App() {
       mobPreviewImg.onload = function () {
         setPreviewLoaded(true);
       };
+    } else if(previewIndex == WORK_PREVIEWS.VIDEOGRAPHY){
+      // openVideoPlayerDialog(WORK[previewIndex][contentIndex].videoId)
+      openVideoPlayerDialog("2g811Eo7K8U")
     }
   }
 
   document.body.style.overflowY =
-    sliderImageDialogOpen || websitePreviewDialogOpen ? "hidden" : "scroll";
+    sliderImageDialogOpen || websitePreviewDialogOpen || videoPlayerDialogOpen ? "hidden" : "scroll";
   return (
     <div
       className={
@@ -481,6 +496,7 @@ function App() {
             THEMES={THEMES}
             WORK={WORK}
             openWorkPreviewDialog={openWorkPreviewDialog}
+            openVideoPlayerDialog={openVideoPlayerDialog}
           ></Work>
           <img
             id="lineShape"
@@ -526,7 +542,7 @@ function App() {
         className="animate__animated fadeIn"
         style={{
           display:
-            sliderImageDialogOpen || websitePreviewDialogOpen
+            sliderImageDialogOpen || websitePreviewDialogOpen || videoPlayerDialogOpen
               ? "block"
               : "none",
         }}
@@ -538,6 +554,15 @@ function App() {
         >
           <img src={sliderImageDialogSrc}></img>
         </dialog>
+
+        <dialog
+          id="videoPlayerDialog"
+          open={videoPlayerDialogOpen}
+          style={{ display: videoPlayerDialogOpen ? "block" : "none" }}
+        >
+          <YouTubePlayer videoId="1dVEfs6Exkc"></YouTubePlayer>
+        </dialog>
+
         <dialog
           id="websitePreviewDialog"
           open={websitePreviewDialogOpen}

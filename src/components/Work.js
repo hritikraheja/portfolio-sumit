@@ -78,7 +78,7 @@ export const Work = (props) => {
             FREELANCE PROJECTS
           </p>
           <p
-            style={activeIndex == 3 ? activeNavItemStyle : {}}
+            style={activeIndex == 4 ? activeNavItemStyle : {}}
             onClick={() => {
               changeActiveIndex(WORK_INDEXES.VIDEOGRAPHY);
             }}

@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Mersad";
+  src: local("Mersad"),
+   url("./fonts/Mersad/OpenTypeTT/MersadThin.ttf") format("truetype");
+  /* font-weight: lighter; */
+  }
