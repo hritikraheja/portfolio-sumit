@@ -102,9 +102,21 @@
     padding-top: 0px;
 }
 
+#home #section #socialMedia a{
+    text-decoration: none;
+}
+
+#home #section #socialMedia a:hover{
+    color: inherit;
+}
+
+#home #section #socialMedia span{
+    cursor: pointer;
+}
+
 #home #section #socialMedia span:hover, #home #section #bio p:hover{
     font-weight: 700;
-    transform: scaleX(0.95) scaleY(1.2);
+    transform: scale(0.98);
 }
 
 @media (max-width : 436px) {

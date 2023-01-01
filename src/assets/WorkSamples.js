@@ -22,6 +22,15 @@ import diwaliPreview from './workAssets/diwaliPreview.png'
 import strawberryPreview from './workAssets/strawberryPreview.png'
 import guruNanakPreview from './workAssets/guruNanakPreview.png'
 import kartikPurnimaPreview from './workAssets/kartikPurnimaPreview.png'
+import financeCaseStudyThumbnail from './workAssets/financeCaseStudyThumbnail.jpg'
+import keyPeeleThumbnail from './workAssets/keyPeeleThumbnail.jpeg'
+import russiaVsUkraineThumbnail from './workAssets/russiaVsUkraineThumnail.png'
+import sleepingMatressThumbnail from './workAssets/sleepingMatressThumbnail.jpg'
+import brandIdentitySeekhlePreview from './workAssets/brandIdentitySeekhlePreview.png'
+import brandIdentitySeekhleGif from './workAssets/brandIdentitySeekhleGif.gif'
+import brandIdentityForesightPreview from './workAssets/brandIdentityForesightPreview.png'
+import brandIdentityForesightGif from './workAssets/brandIdentityForesightGif.gif'
+import freelanceClientSlide1 from './workAssets/freelanceClients1.png'
 
 const WORK_SAMPLES = {
     websiteDesign1 : websiteDesign1,
@@ -47,7 +56,16 @@ const WORK_SAMPLES = {
     diwaliPreview,
     megaFestivalPreview,
     kartikPurnimaPreview,
-    strawberryPreview
+    strawberryPreview,
+    keyPeeleThumbnail,
+    financeCaseStudyThumbnail,
+    russiaVsUkraineThumbnail,
+    sleepingMatressThumbnail,
+    brandIdentityForesightGif,
+    brandIdentityForesightPreview,
+    brandIdentitySeekhleGif,
+    brandIdentitySeekhlePreview,
+    freelanceClientSlide1
 }
 
 export default WORK_SAMPLES

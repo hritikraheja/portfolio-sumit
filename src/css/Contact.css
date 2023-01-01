@@ -85,7 +85,6 @@
   margin-bottom: 40px;
   font-weight: 100;
   text-align: left;
-  text-decoration: underline;
 }
 
 #contact #contactDetails #left #contactGroup:hover #contactSubhead{
@@ -174,11 +173,17 @@ margin: auto 10% auto auto;
   margin-top: 20px;
 }
 
-#contact #footer #footerLevel2 i {
+#contact #footer #footerLevel2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#contact #footer #footerLevel2 a i {
   font-size: 20px;
   line-height: 23px;
   font-weight: 100;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #contact #footer #footerLevel2 i:hover {
@@ -212,15 +217,15 @@ margin: auto 10% auto auto;
   }
 
   #contact #head {
-    font-size: 50px;
+    font-size: 46px;
     padding-top: 0px;
     line-height: 58px;
   }
 
   #contact #contactDetails {
-    width: 95%;
+    width: 98%;
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   #contact #contactDetails #left {
@@ -228,17 +233,17 @@ margin: auto 10% auto auto;
   }
 
   #contact #contactDetails #left #contactHead {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 32px;
   }
 
   #contact #contactDetails #left #contactHead img {
-    width: 25px;
+    width: 22px;
   }
 
   #contact #contactDetails #left #contactSubhead {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
     margin-bottom: 20px;
   }
 
@@ -251,8 +256,8 @@ margin: auto 10% auto auto;
   }
 
   #contact #contactDetails #rightMob p{
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   #content #footer {
@@ -260,18 +265,18 @@ margin: auto 10% auto auto;
   }
 
   #content #footer #footerLevel1 {
-    width: 75%;
+    width: 80%;
   }
 
   #content #footer #footerLevel1 a {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 16px;
     font-weight: 100;
     text-decoration: none;
   }
 
   #content #footer #footerLevel2 {
-    width: 50%;
+    width: 65%;
     margin-top: 15px;
   }
 

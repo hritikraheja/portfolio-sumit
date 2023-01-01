@@ -30,6 +30,7 @@ import ReactLoading from "react-loading";
 import WorkSamples from "../assets/WorkSamples";
 import { FREELANCE_PROJECTS_SLIDES } from "../assets/FreelanceProjectsSlides";
 import YouTubePlayer from "react-youtube";
+import WORK_SAMPLES from "../assets/WorkSamples";
 
 function App() {
   const THEMES = {
@@ -62,6 +63,9 @@ function App() {
   const COOKIES = new Cookies();
   const [videoPlayerDialogOpen, setVideoPlayerDialogOpen] = useState(false)
   const [videoPlayerVideoId, setVideoPlayerVideoId] = useState('')
+  const [brandIdentityPreviewDialogImg, setBrandIdentityPreviewDialogImg] = useState('')
+  const [brandIdentityPreviewDialogGif, setBrandIdentityPreviewDialogGif] = useState('')
+  const [brandIdentityPreviewDialogOpen, setBrandIdentityPreviewDialogOpen] = useState(false)
 
   useEffect(() => {
     if (COOKIES.get("theme")) {
@@ -167,28 +171,20 @@ function App() {
     ],
     [
       {
-        name: "Swiggy Instamart D2C Hipstreet",
-        type: "In-App Compaign",
-        year: "2022",
+        name: "Seekhle Financial Literacy Page",
+        type: "Brand Identity",
+        year: "2021",
         image: WorkSamples.brandIdentity1,
+        previewImageSrc : WorkSamples.brandIdentitySeekhlePreview,
+        gifSrc : WorkSamples.brandIdentitySeekhleGif
       },
       {
-        name: "Swiggy Mega Saving Festival",
-        type: "In-App Compaign",
+        name: "Foresight Opinion Trading App",
+        type: "Brand Identity",
         year: "2022",
         image: WorkSamples.brandIdentity2,
-      },
-      {
-        name: "Swiggy Instamart Diwali Payday",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity3,
-      },
-      {
-        name: "Swiggy Instamart Strawberry",
-        type: "In-App Compaign",
-        year: "2022",
-        image: WorkSamples.brandIdentity4,
+        previewImageSrc : WorkSamples.brandIdentityForesightPreview,
+        gifSrc : WorkSamples.brandIdentityForesightGif
       },
     ],
     [
@@ -218,37 +214,37 @@ function App() {
         type: "Print Design",
         year: "2022",
         image: WorkSamples.freelanceProjects4,
-        slides: FREELANCE_PROJECTS_SLIDES.FORESIGHT_SLIDES,
+        slides: [WORK_SAMPLES.freelanceClientSlide1],
       },
     ],
     [
       {
-        name: "Tara Indepay Appstore",
-        type: "Overview Screenshots",
+        name: "Russia vs Ukraine: Indian Students Eviction",
+        type: "Infographic Reel",
         year: "2022",
-        image: WorkSamples.freelanceProjects1,
-        slides: FREELANCE_PROJECTS_SLIDES.TARA_SLIDES,
+        image: WorkSamples.russiaVsUkraineThumbnail,
+        videoId : 'nrzr9pQayyY'
       },
       {
-        name: "Foresight Appstore",
-        type: "Overview Screenshots",
+        name: "Sleeping Mattress Marketing",
+        type: "Animated Reel",
         year: "2022",
-        image: WorkSamples.freelanceProjects2,
-        slides: FREELANCE_PROJECTS_SLIDES.FORESIGHT_SLIDES,
+        image: WorkSamples.sleepingMatressThumbnail,
+        videoId : '55jDbQVrkGE'
       },
       {
-        name: "Josh Talks Pitch Deck",
-        type: "Presentation Design",
+        name: "Finance Case Study",
+        type: "Infographic Reel",
         year: "2022",
-        image: WorkSamples.freelanceProjects3,
-        slides: FREELANCE_PROJECTS_SLIDES.JOSH_SLIDES,
+        image: WorkSamples.financeCaseStudyThumbnail,
+        videoId : 'bWNOIMxCVJk'
       },
       {
-        name: "Freelance Clients",
-        type: "Print Design",
+        name: "Key and Peele: Stock Market",
+        type: "Parody Video",
         year: "2022",
-        image: WorkSamples.freelanceProjects4,
-        slides: FREELANCE_PROJECTS_SLIDES.FORESIGHT_SLIDES,
+        image: WorkSamples.keyPeeleThumbnail,
+        videoId : 'IcUsWUFCaYw'
       },
     ],
   ];
@@ -299,6 +295,10 @@ function App() {
     } else if(e.target.id == "videoPlayerDialog"){
       setVideoPlayerDialogOpen(false)
       setVideoPlayerVideoId('')
+    } else if(e.target.id == "brandIdentityPreviewDialog"){
+      setBrandIdentityPreviewDialogGif(null)
+      setBrandIdentityPreviewDialogImg(null)
+      setBrandIdentityPreviewDialogOpen(false)
     }
   };
 
@@ -317,6 +317,12 @@ function App() {
   function openSliderImageDialog(imgSrc) {
     setSliderImageDialogSrc(imgSrc);
     setSliderImageDialogOpen(true);
+  }
+
+  function openBrandIdentityPreviewDialog(imgSrc, gifSrc) {
+    setBrandIdentityPreviewDialogImg(imgSrc)
+    setBrandIdentityPreviewDialogGif(gifSrc)
+    setBrandIdentityPreviewDialogOpen(true)
   }
 
   function openVideoPlayerDialog(videoId){
@@ -386,8 +392,12 @@ function App() {
         setPreviewLoaded(true);
       };
     } else if(previewIndex == WORK_PREVIEWS.VIDEOGRAPHY){
-      // openVideoPlayerDialog(WORK[previewIndex][contentIndex].videoId)
-      openVideoPlayerDialog("2g811Eo7K8U")
+      openVideoPlayerDialog(WORK[previewIndex][contentIndex].videoId)
+      // openVideoPlayerDialog("2g811Eo7K8U")
+    } else if(previewIndex == WORK_PREVIEWS.BRAND_IDENTITY){
+      openBrandIdentityPreviewDialog(
+        WORK[previewIndex][contentIndex].previewImageSrc,
+        WORK[previewIndex][contentIndex].gifSrc)
     }
   }
 
@@ -542,7 +552,7 @@ function App() {
         className="animate__animated fadeIn"
         style={{
           display:
-            sliderImageDialogOpen || websitePreviewDialogOpen || videoPlayerDialogOpen
+            sliderImageDialogOpen || websitePreviewDialogOpen || videoPlayerDialogOpen || brandIdentityPreviewDialogOpen
               ? "block"
               : "none",
         }}
@@ -556,11 +566,22 @@ function App() {
         </dialog>
 
         <dialog
+          id="brandIdentityPreviewDialog"
+          open={brandIdentityPreviewDialogOpen}
+          style={{ display: brandIdentityPreviewDialogOpen ? "block" : "none" }}
+        >
+          <div id="images">
+            <img id="img" src={brandIdentityPreviewDialogImg}></img>
+            <img id="gif" src={brandIdentityPreviewDialogGif}></img>
+          </div>
+        </dialog>
+
+        <dialog
           id="videoPlayerDialog"
           open={videoPlayerDialogOpen}
           style={{ display: videoPlayerDialogOpen ? "block" : "none" }}
         >
-          <YouTubePlayer videoId="1dVEfs6Exkc"></YouTubePlayer>
+          <YouTubePlayer videoId={videoPlayerVideoId}></YouTubePlayer>
         </dialog>
 
         <dialog

@@ -16,7 +16,7 @@ export const Home = (props) => {
       <p id="head">
         I <span>CREATE</span> DESIGNS<br></br>
         THAT ARE HARD TO<br></br>
-        IGNORE <a href="#about"><img src={props.theme == props.THEMES.DARK ? enterIconDarkTheme : enterIconLightTheme}></img></a>
+        IGNORE <a href="#work"><img src={props.theme == props.THEMES.DARK ? enterIconDarkTheme : enterIconLightTheme}></img></a>
       </p>
       <div id="section">
         <div id="division">
@@ -24,9 +24,21 @@ export const Home = (props) => {
         </div>
         <div id="division">
           <div id="socialMedia">
-            <span>BEHANCE</span>
-            <span>LINKEDIN</span>
-            <span>INSTAGRAM</span>
+            <a className={
+                props.theme == props.THEMES.DARK
+                  ? "darkThemeSubHeadFont"
+                  : "lightThemeSubHeadFont"
+              } href="https://www.behance.net/peshesedesigner" target="_blank"><span>BEHANCE</span></a>
+            <a className={
+                props.theme == props.THEMES.DARK
+                  ? "darkThemeSubHeadFont"
+                  : "lightThemeSubHeadFont"
+              } href="https://linkedin.com/in/sumitmittal-/" target="_blank"><span>LINKEDIN</span></a>
+            <a className={
+                props.theme == props.THEMES.DARK
+                  ? "darkThemeSubHeadFont"
+                  : "lightThemeSubHeadFont"
+              } href="https://instagram.com/peshesedesigner/" target="_blank"><span>INSTAGRAM</span></a>
           </div>
         </div>
         <div id="division">

@@ -62,7 +62,7 @@
     }
 
     #socialMediaPosts #header span{
-        font-size: 12px;
+        font-size: 9px;
         line-height: 15px;
     }
 
@@ -79,7 +79,7 @@
     }
     
     #socialMediaPosts .marquee #topSlider img, #socialMediaPosts .marquee #bottomSlider img{
-        height: 150px;
+        height: 125px;
         margin: 0px 5px;
     }
 }

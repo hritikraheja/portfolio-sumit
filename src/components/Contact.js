@@ -6,7 +6,6 @@ import enterIconLightTheme from "../assets/enterIconLightTheme.svg";
 import hireMeCircleLightTheme from "../assets/hireMeCircleLightTheme.svg";
 
 function Contact(props) {
-
   return (
     <div
       id="contact"
@@ -19,8 +18,17 @@ function Contact(props) {
       <p id="head">CONTACT</p>
       <div id="contactDetails">
         <div id="left">
-          <a id="contactGroup" href= "mailto:sumitmittal2336@gmail.com" target="_blank">
-            <p id="contactHead" style={{'color' : props.theme == props.THEMES.DARK ? 'white' : '#181a19' }}>
+          <a
+            id="contactGroup"
+            href="mailto:sumitmittal2336@gmail.com"
+            target="_blank"
+          >
+            <p
+              id="contactHead"
+              style={{
+                color: props.theme == props.THEMES.DARK ? "white" : "#181a19",
+              }}
+            >
               EMAIL
               <img
                 src={
@@ -41,11 +49,17 @@ function Contact(props) {
               sumitmittal2336@gmail.com
             </p>
           </a>
-          <a id="contactGroup" 
-           href="https://www.behance.net/peshesedesigner"
-           target='_blank'
+          <a
+            id="contactGroup"
+            href="https://www.behance.net/peshesedesigner"
+            target="_blank"
           >
-            <p id="contactHead" style={{'color' : props.theme == props.THEMES.DARK ? 'white' : '#181a19' }}>
+            <p
+              id="contactHead"
+              style={{
+                color: props.theme == props.THEMES.DARK ? "white" : "#181a19",
+              }}
+            >
               BEHANCE
               <img
                 src={
@@ -66,8 +80,17 @@ function Contact(props) {
               behance.net/peshesedesigner
             </p>
           </a>
-          <a id="contactGroup" href="https://linkedin.com/in/sumitmittal-/" target="_blank" >
-            <p id="contactHead" style={{'color' : props.theme == props.THEMES.DARK ? 'white' : '#181a19' }}>
+          <a
+            id="contactGroup"
+            href="https://linkedin.com/in/sumitmittal-/"
+            target="_blank"
+          >
+            <p
+              id="contactHead"
+              style={{
+                color: props.theme == props.THEMES.DARK ? "white" : "#181a19",
+              }}
+            >
               LINKEDIN
               <img
                 src={
@@ -88,8 +111,17 @@ function Contact(props) {
               linkedin.com/in/sumitmittal-/
             </p>
           </a>
-          <a id="contactGroup" href="https://instagram.com/peshesedesigner/" target="_blank">
-            <p id="contactHead" style={{'color' : props.theme == props.THEMES.DARK ? 'white' : '#181a19' }}>
+          <a
+            id="contactGroup"
+            href="https://instagram.com/peshesedesigner/"
+            target="_blank"
+          >
+            <p
+              id="contactHead"
+              style={{
+                color: props.theme == props.THEMES.DARK ? "white" : "#181a19",
+              }}
+            >
               INSTAGRAM
               <img
                 src={
@@ -113,8 +145,9 @@ function Contact(props) {
         </div>
         <div id="rightWeb">
           <p>
-            Say hello! Whether it’s a chat about anything design related or a
-            potential project or opportunity you may have in mind, hit me up.
+            Say hello! Whether it’s a chat about design or a potential project,
+            you may have in mind, hit me up.<br></br><br></br>Or just skip the queue- 
+            <strong>+91 7983497380</strong>
           </p>
           <img
             src={
@@ -133,8 +166,9 @@ function Contact(props) {
             }
           ></img>
           <p>
-            Say hello! Whether it’s a chat about anything design related or a
-            potential project or opportunity you may have in mind, hit me up.
+          Say hello! Whether it’s a chat about design or a potential project,
+            you may have in mind, hit me up.<br></br><br></br>Or just skip the queue- <br></br>
+            <strong>+91 7983497380</strong>
           </p>
         </div>
       </div>
@@ -192,11 +226,61 @@ function Contact(props) {
           </a>
         </div>
         <div id="footerLevel2">
-          <i className="fa-brands fa-linkedin"></i>
-          <i className="fa-brands fa-instagram"></i>
-          <i className="fa-brands fa-twitter"></i>
-          <i className="fa-brands fa-behance"></i>
-          <i className="fa-brands fa-dribbble"></i>
+          <a
+            className={
+              props.theme == props.THEMES.DARK
+                ? "darkThemeSubHeadFont"
+                : "lightThemeSubHeadFont"
+            }
+            href="https://linkedin.com/in/sumitmittal-/"
+            target="_blank"
+          >
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            className={
+              props.theme == props.THEMES.DARK
+                ? "darkThemeSubHeadFont"
+                : "lightThemeSubHeadFont"
+            }
+            href="https://instagram.com/peshesedesigner/"
+            target="_blank"
+          >
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            className={
+              props.theme == props.THEMES.DARK
+                ? "darkThemeSubHeadFont"
+                : "lightThemeSubHeadFont"
+            }
+            href="https://twitter.com/dungeon_mastor/"
+            target="_blank"
+          >
+            <i className="fa-brands fa-twitter"></i>
+          </a>
+          <a
+            className={
+              props.theme == props.THEMES.DARK
+                ? "darkThemeSubHeadFont"
+                : "lightThemeSubHeadFont"
+            }
+            href="https://www.behance.net/peshesedesigner"
+            target="_blank"
+          >
+            <i className="fa-brands fa-behance"></i>
+          </a>
+          <a
+            className={
+              props.theme == props.THEMES.DARK
+                ? "darkThemeSubHeadFont"
+                : "lightThemeSubHeadFont"
+            }
+            href="https://dribbble.com/dungeon_Mastor"
+            target="_blank"
+          >
+            <i className="fa-brands fa-dribbble"></i>
+          </a>
         </div>
         <div id="footerLevel3">
           <p>&copy; 2022 Portfolio</p>
